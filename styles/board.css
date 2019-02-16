@@ -63,7 +63,12 @@ dice{
 }
 
 dice[score="2"]{
-    background: url("../imgs/Die_Faces_3.png");
+    background: url("../imgs/Die_Faces_1.png");
+    background-size: cover;
+}
+
+dice[score="2"]{
+    background: url("../imgs/Die_Faces_2.png");
     background-size: cover;
 }
 
@@ -76,10 +81,15 @@ dice[score="4"]{
     background-size: cover;
 }
 dice[score="5"]{
-    background: url("../imgs/Die_Faces_6.png");
+    background: url("../imgs/Die_Faces_5.png");
     background-size: cover;
 }
 dice[score="6"]{
     background: url("../imgs/Die_Faces_6.png");
+    background-size: cover;
+}
+
+dice[score="0"]{
+    background: url("../imgs/dice.gif");
     background-size: cover;
 }
