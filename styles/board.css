@@ -1,0 +1,65 @@
+game{
+    display:block;
+    margin:2em auto;
+    background:yellow;
+    width:500px;
+    height:500px;
+    position:relative;
+    overflow:hidden;
+}
+
+box{
+    display:block;
+    background: yellow;
+    border-color: red;
+    border-style: solid;
+    width:100px;
+    height:100px;
+    position:absolute;
+    left:0px;
+    top:0px;
+    background-size: cover;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+box[y="1"]{
+    top:100px;
+}
+box[y="2"]{
+    top:200px;
+}
+box[y="3"]{
+    top:300px;
+}
+box[y="4"]{
+    top:400px;
+}
+box[x="1"]{
+    left:100px;
+}
+box[x="2"]{
+    left:200px;
+}
+box[x="3"]{
+    left:300px;
+}
+box[x="4"]{
+    left:400px;
+}
+
+dice{
+    display:block;
+    background: url("../imgs/Die_Faces_1.png");
+    border-color: blue;
+    border-style: solid;
+    width:100px;
+    height:100px;
+    position:absolute;
+    left:0px;
+    top:0px;
+    background-size: cover;
+    text-align: center;
+    font-size: 30px;
+}

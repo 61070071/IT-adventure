@@ -1,0 +1,116 @@
+character{
+    display:block;
+    position:absolute;
+    width: 80px;
+    height: 80px;
+    background: lightslategrey;
+    font-size: 20px;
+    top: 410px;
+    left: 10px;
+
+}
+
+character[step = "1"]{
+    top: 410px;
+    left: 10px;
+}
+
+character[step = "2"]{
+    top: 410px;
+    left: 110px;
+}
+
+character[step = "3"]{
+    top: 410px;
+    left: 210px;
+}
+character[step = "4"]{
+    top: 410px;
+    left: 310px;
+}
+character[step = "5"]{
+    top: 410px;
+    left: 410px;
+}
+character[step = "6"]{
+    top: 310px;
+    left: 410px;
+}
+
+character[step = "7"]{
+    top: 310px;
+    left: 310px;
+}
+
+character[step = "8"]{
+    top: 310px;
+    left: 210px;
+}
+character[step = "9"]{
+    top: 310px;
+    left: 110px;
+}
+character[step = "10"]{
+    top: 310px;
+    left: 10px;
+}
+character[step = "11"]{
+    top: 210px;
+    left: 10px;
+}
+character[step = "12"]{
+    top: 210px;
+    left: 110px;
+}
+character[step = "13"]{
+    top: 210px;
+    left: 210px;
+}
+character[step = "14"]{
+    top: 210px;
+    left: 310px;
+}
+character[step = "15"]{
+    top: 210px;
+    left: 410px;
+}
+character[step = "16"]{
+    top: 110px;
+    left: 410px;
+}
+character[step = "17"]{
+    top: 110px;
+    left: 310px;
+}
+character[step = "18"]{
+    top: 110px;
+    left: 210px;
+}
+character[step = "19"]{
+    top: 110px;
+    left: 110px;
+}
+character[step = "20"]{
+    top: 110px;
+    left: 10px;
+}
+character[step = "21"]{
+    top: 10px;
+    left: 10px;
+}
+character[step = "22"]{
+    top: 10px;
+    left: 110px;
+}
+character[step = "23"]{
+    top: 10px;
+    left: 210px;
+}
+character[step = "24"]{
+    top: 10px;
+    left: 310px;
+}
+character[step = "25"]{
+    top: 10px;
+    left: 410px;
+}
