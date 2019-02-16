@@ -52,8 +52,6 @@ box[x="4"]{
 dice{
     display:block;
     background: url("../imgs/Die_Faces_1.png");
-    border-color: blue;
-    border-style: solid;
     width:100px;
     height:100px;
     position:absolute;
@@ -62,4 +60,26 @@ dice{
     background-size: cover;
     text-align: center;
     font-size: 30px;
+}
+
+dice[score="2"]{
+    background: url("../imgs/Die_Faces_3.png");
+    background-size: cover;
+}
+
+dice[score="3"]{
+    background: url("../imgs/Die_Faces_3.png");
+    background-size: cover;
+}
+dice[score="4"]{
+    background: url("../imgs/Die_Faces_4.png");
+    background-size: cover;
+}
+dice[score="5"]{
+    background: url("../imgs/Die_Faces_6.png");
+    background-size: cover;
+}
+dice[score="6"]{
+    background: url("../imgs/Die_Faces_6.png");
+    background-size: cover;
 }
