@@ -56,7 +56,7 @@ dice{
     height:100px;
     position:absolute;
     left:0px;
-    top:0px;
+    top:200px;
     background-size: cover;
     text-align: center;
     font-size: 30px;
@@ -93,3 +93,9 @@ dice[score="0"]{
     background: url("../imgs/dice.gif");
     background-size: cover;
 }
+
+#theDice2{
+    left: 100px;
+}
+
+

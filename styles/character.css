@@ -1,13 +1,30 @@
 character{
-    display:block;
+    /*display:block;*/
     position:absolute;
     width: 80px;
     height: 80px;
-    background: lightslategrey;
-    font-size: 20px;
+    background-image: url("../imgs/Player.png");
+    background-size: cover;
     top: 410px;
     left: 10px;
+    color: red;
+}
 
+#player2{
+    color: blue;
+}
+
+character[animate = "1"]{
+    animation: movement 1s infinite linear alternate;
+}
+
+@keyframes movement {
+    0% {transform: rotate(0deg)}
+    20% {transform: rotate(20deg)}
+    40% {transform: rotate(0deg)}
+    60% {transform: rotate(20deg)}
+    80% {transform: rotate(0deg)}
+    100% {transform: rotate(20deg)}
 }
 
 character[step = "1"]{
