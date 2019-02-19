@@ -3,43 +3,56 @@
 <head>
 	<title>test</title>
 	<link rel="stylesheet" type="text/css" href="./styles/board.css">
-        <link rel="stylesheet" type="text/css" href="./styles/character.css">
+    <link rel="stylesheet" type="text/css" href="./styles/character.css">
+    <link rel="stylesheet" type="text/css" href="./styles/game.css">
 </head>
 <body>
-    <div><h1><span id="theTurn" turn="player1"></span> Turn</h1></div>
-	<game>
-		<box id="1" x="0" y="4">1</box>
-        <box id="2" x="1" y="4">2</box>
-        <box id="3" x="2" y="4">3</box>
-        <box id="4" x="3" y="4">4</box>
-        <box id="5" x="4" y="4">5</box>
-        <box id="6" x="4" y="3">6</box>
-        <box id="7" x="3" y="3">7</box>
-        <box id="8" x="2" y="3">8</box>
-        <box id="9" x="1" y="3">9</box>
-        <box id="10" x="0" y="3">0</box>
-        <box id="11" x="0" y="2">11</box>
-        <box id="12" x="1" y="2">12</box>
-        <box id="13" x="2" y="2">13</box>
-        <box id="14" x="3" y="2">14</box>
-        <box id="15" x="4" y="2">15</box>
-        <box id="16" x="4" y="1">16</box>
-        <box id="17" x="3" y="1">17</box>
-        <box id="18" x="2" y="1">18</box>
-        <box id="19" x="1" y="1">19</box>
-        <box id="20" x="0" y="1">20</box>
-        <box id="21" x="0" y="0">21</box>
-        <box id="22" x="1" y="0">22</box>
-        <box id="23" x="2" y="0">23</box>
-        <box id="24" x="3" y="0">24</box>
-        <box id="25" x="4" y="0">25</box>
-        <character id="player2" animate="0" step="1">p2</character>
-        <character id="player1" animate="0" step="1">p1</character>
+<div><center><h1 id="head"><span id="theTurn"></span></h1></center></div>
+    <center><div id="selectPlayer">
+        <h1 class="select" onclick="gameStart(this)">2 Player</h1><br>
+        <h1 class="select" onclick="gameStart(this)">3 Player</h1><br>
+        <h1 class="select" onclick="gameStart(this)">4 Player</h1>
+    </div></center>
+	<game id="game">
+        <div class="theBoard">
+            <box id="1" x="0" y="4">1</box>
+            <box id="2" x="1" y="4">2</box>
+            <box id="3" x="2" y="4">3</box>
+            <box id="4" x="3" y="4">4</box>
+            <box id="5" x="4" y="4">5</box>
+            <box id="6" x="4" y="3">6</box>
+            <box id="7" x="3" y="3">7</box>
+            <box id="8" x="2" y="3">8</box>
+            <box id="9" x="1" y="3">9</box>
+            <box id="10" x="0" y="3">0</box>
+            <box id="11" x="0" y="2">11</box>
+            <box id="12" x="1" y="2">12</box>
+            <box id="13" x="2" y="2">13</box>
+            <box id="14" x="3" y="2">14</box>
+            <box id="15" x="4" y="2">15</box>
+            <box id="16" x="4" y="1">16</box>
+            <box id="17" x="3" y="1">17</box>
+            <box id="18" x="2" y="1">18</box>
+            <box id="19" x="1" y="1">19</box>
+            <box id="20" x="0" y="1">20</box>
+            <box id="21" x="0" y="0">21</box>
+            <box id="22" x="1" y="0">22</box>
+            <box id="23" x="2" y="0">23</box>
+            <box id="24" x="3" y="0">24</box>
+            <box id="25" x="4" y="0">25</box>
+        </div>
+
+		<div class="allPayer">
+            <character id="player4" animate="0" step="1">p4</character>
+            <character id="player3" animate="0" step="1">p3</character>
+            <character id="player2" animate="0" step="1">p2</character>
+            <character id="player1" animate="0" step="1">p1</character>
+        </div>
 	</game>
 
     <div >
-            <dice id="theDice1" score="1" player="player1" onclick="diceFunction()"></dice>
-            <dice id="theDice2" score="1" player="player1" onclick="diceFunction()"></dice>
+            <dice id="theDice1" score="1" onclick="diceFunction()"></dice>
+            <dice id="theDice2" score="1" onclick="diceFunction()"></dice>
     </div>
 
 <script src="./js/board.js"></script>

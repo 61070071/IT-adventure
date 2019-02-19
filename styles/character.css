@@ -11,7 +11,17 @@ character{
 }
 
 #player2{
-    color: blue;
+     color: blue;
+ }
+
+#player3{
+    color: green;
+    display: none;
+}
+
+#player4{
+    color: yellow;
+    display: none;
 }
 
 character[animate = "1"]{
