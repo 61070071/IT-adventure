@@ -33,7 +33,8 @@ function gameStart(num){
     for (i = 0; i<theDice.length; i++){
         theDice[i].style.display = 'inline-block'
     }
-    console.log(player)
+    console.log(player);
+    b1 = document.getElementById('b1');
     turnStart()
 }
 
@@ -95,7 +96,87 @@ function moveFunction(start, end) {
             moveFunction(start, end);
         } else {
             player[turn].step = end;
+            for(var p in player){
+                if(player[turn].step === player[p].step && turn !== p){
+                    document.getElementById('battle').style.display = 'inline-block';
+                    b1.innerText = turn;
+                    b2.innerText = p;
+                    b1.setAttribute('battle','1');
+                    b2.setAttribute('battle','1');
+                }
+            }
             turnEnd();
         }}, 400);
 
 }
+
+function reverseCounter() {
+    var reverse = player[loser].step - 5;
+    console.log(reverse);
+    moveReverse(reverse);
+}
+
+function moveReverse(reverse) {
+    player[loser].step --;
+    theLoser = document.getElementById(loser);
+    setTimeout(function () {
+        theLoser.setAttribute("step", player[loser].step)
+        if(player[loser].step > reverse){
+            moveReverse(reverse)
+        }
+    }, 400);
+}
+
+
+var b1 = document.getElementById('b1');
+var b1Bar = 0;
+var b2 = document.getElementById('b2');
+var b2Bar = 0;
+var loser = '';
+document.onkeydown = document.body.onkeykeypress = function(e)
+{
+    if((e.keyCode == 65 || e.keyCode == 97) && document.getElementById("b1").getAttribute("battle") == "1") {
+        e = e || window.event;
+        b1Bar += 8;
+        if(b1Bar >= 296){
+            b1.style.width = '296px';
+            win.innerText = b1.innerText + " Win";
+            loser = b2.innerText;
+            b1.setAttribute('battle','0');
+            b2.setAttribute('battle','0');
+            b1Bar = 0;
+            b2Bar = 0;
+            setTimeout(function () {
+                document.getElementById('battle').style.display = 'none';
+                reverseCounter()
+            }, 1500);
+
+        } else {
+            b1.style.width = b1Bar+'px';
+        }
+
+
+        // i.innerHTML = 'Hello';
+        // document.body.style.backgroundColor = "#efeab6"
+    } else if((e.keyCode == 76 || e.keyCode == 108) && document.getElementById("b2").getAttribute("battle") == "1") {
+        e = e || window.event;
+        b2Bar += 8;
+        if(b2Bar >= 296){
+            b2.style.width = '296px';
+            win.innerText = b2.innerText + " Win";
+            loser = b1.innerText;
+            b1.setAttribute('battle','1');
+            b2.setAttribute('battle','1');
+            b1Bar = 0;
+            b2Bar = 0;
+            setTimeout(function () {
+                document.getElementById('battle').style.display = 'none';
+                reverseCounter()
+            }, 1500);
+        } else {
+            b2.style.width = b2Bar+'px';
+        }
+        // i.innerHTML = 'Hello';
+        // document.body.style.backgroundColor = "#efeab6"
+    }
+};

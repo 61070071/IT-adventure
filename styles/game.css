@@ -8,7 +8,7 @@ game{
     overflow:hidden;
 }
 dice{
-    background: url("../imgs/Die_Faces_1.png");
+    background: url("../imgs/dice_type_new_1.png");
     width:100px;
     height:100px;
     position:absolute;
@@ -20,34 +20,34 @@ dice{
 }
 
 dice[score="2"]{
-    background: url("../imgs/Die_Faces_1.png");
+    background: url("../imgs/dice_type_new_1.png");
     background-size: cover;
 }
 
 dice[score="2"]{
-    background: url("../imgs/Die_Faces_2.png");
+    background: url("../imgs/dice_type_new_2.png");
     background-size: cover;
 }
 
 dice[score="3"]{
-    background: url("../imgs/Die_Faces_3.png");
+    background: url("../imgs/dice_type_new_3.png");
     background-size: cover;
 }
 dice[score="4"]{
-    background: url("../imgs/Die_Faces_4.png");
+    background: url("../imgs/dice_type_new_4.png");
     background-size: cover;
 }
 dice[score="5"]{
-    background: url("../imgs/Die_Faces_5.png");
+    background: url("../imgs/dice_type_new_5.png");
     background-size: cover;
 }
 dice[score="6"]{
-    background: url("../imgs/Die_Faces_6.png");
+    background: url("../imgs/dice_type_new_6.png");
     background-size: cover;
 }
 
 dice[score="0"]{
-    background: url("../imgs/dice.gif");
+    background: url("../imgs/dice_new_type_1_full.gif");
     background-size: cover;
 }
 #theDice1{
@@ -72,4 +72,25 @@ dice[score="0"]{
 .select:Hover{
     color: red;
     text-decoration: underline;
+}
+
+.plot{
+    border-style: solid;
+    width: 300px;
+    height: 40px;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+.battle{
+    background: green;
+    margin-top: 2px;
+    margin-left: 2px;
+    width: 0px;
+    height: 36px;
+
+}
+
+#battle{
+    display: none;
 }
