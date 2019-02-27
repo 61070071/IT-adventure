@@ -1,13 +1,13 @@
 character{
-    /*display:block;*/
+    display:inline-block;
     position:absolute;
     width: 80px;
     height: 80px;
     background-image: url("../imgs/Player.png");
     background-size: cover;
-    top: 410px;
-    left: 10px;
     color: red;
+    top: 220px;
+    left: 710px;
 }
 
 #player2{
@@ -37,107 +37,187 @@ character[animate = "1"]{
     100% {transform: rotate(20deg)}
 }
 
-character[step = "1"]{
-    top: 410px;
+character[step = "0"]{
+    top: 620px;
     left: 10px;
+}
+
+character[step = "1"]{
+    top: 620px;
+    left: 110px;
 }
 
 character[step = "2"]{
-    top: 410px;
-    left: 110px;
-}
-
-character[step = "3"]{
-    top: 410px;
+    top: 620px;
     left: 210px;
 }
-character[step = "4"]{
-    top: 410px;
+character[step = "3"]{
+    top: 620px;
     left: 310px;
 }
-character[step = "5"]{
-    top: 410px;
+character[step = "4"]{
+    top: 620px;
     left: 410px;
 }
+character[step = "5"]{
+    top: 620px;
+    left: 510px;
+}
+
 character[step = "6"]{
-    top: 310px;
-    left: 410px;
+    top: 620px;
+    left: 610px;
 }
 
 character[step = "7"]{
-    top: 310px;
-    left: 310px;
+    top: 620px;
+    left: 710px;
 }
-
 character[step = "8"]{
-    top: 310px;
-    left: 210px;
+    top: 620px;
+    left: 810px;
 }
 character[step = "9"]{
-    top: 310px;
-    left: 110px;
+    top: 620px;
+    left: 910px;
 }
 character[step = "10"]{
-    top: 310px;
-    left: 10px;
+    top: 620px;
+    left: 1010px;
 }
 character[step = "11"]{
-    top: 210px;
-    left: 10px;
+    top: 620px;
+    left: 1110px;
 }
 character[step = "12"]{
-    top: 210px;
-    left: 110px;
+    top: 520px;
+    left: 1110px;
 }
 character[step = "13"]{
-    top: 210px;
-    left: 210px;
+    top: 420px;
+    left: 1110px;
 }
 character[step = "14"]{
-    top: 210px;
-    left: 310px;
+    top: 420px;
+    left: 1010px;
 }
 character[step = "15"]{
-    top: 210px;
-    left: 410px;
+    top: 420px;
+    left: 910px;
 }
 character[step = "16"]{
-    top: 110px;
-    left: 410px;
+    top: 420px;
+    left: 810px;
 }
 character[step = "17"]{
-    top: 110px;
-    left: 310px;
+    top: 420px;
+    left: 710px;
 }
 character[step = "18"]{
-    top: 110px;
-    left: 210px;
+    top: 420px;
+    left: 610px;
 }
 character[step = "19"]{
-    top: 110px;
-    left: 110px;
+    top: 420px;
+    left: 510px;
 }
 character[step = "20"]{
-    top: 110px;
-    left: 10px;
+    top: 420px;
+    left: 410px;
 }
 character[step = "21"]{
-    top: 10px;
-    left: 10px;
-}
+     top: 420px;
+     left: 310px;
+ }
 character[step = "22"]{
-    top: 10px;
-    left: 110px;
+    top: 420px;
+    left:210px;
 }
 character[step = "23"]{
-    top: 10px;
-    left: 210px;
+    top: 420px;
+    left: 110px;
 }
 character[step = "24"]{
-    top: 10px;
-    left: 310px;
+    top: 350px;
+    left: 10px;
 }
 character[step = "25"]{
-    top: 10px;
+    top: 320px;
+    left: 110px;
+}
+character[step = "26"]{
+    top: 320px;
+    left: 210px;
+}
+character[step = "27"]{
+    top: 220px;
+    left:210px;
+}
+character[step = "28"]{
+    top: 220px;
+    left: 110px;
+}
+character[step = "29"]{
+    top: 220px;
+    left: 10px;
+}
+character[step = "30"]{
+     top: 120px;
+     left: 10px;
+ }
+character[step = "31"]{
+    top: 20px;
+    left: 10px;
+}
+character[step = "32"]{
+    top: 20px;
+    left: 110px;
+}
+character[step = "33"]{
+    top: 20px;
+    left: 210px;
+}
+character[step = "34"]{
+    top: 20px;
+    left: 310px;
+}
+character[step = "35"]{
+    top: 20px;
     left: 410px;
+}
+character[step = "36"]{
+    top: 20px;
+    left: 510px;
+}
+character[step = "37"]{
+    top: 120px;
+    left: 510px;
+}
+character[step = "38"]{
+    top: 220px;
+    left: 510px;
+}
+character[step = "39"]{
+    top: 220px;
+    left: 610px;
+}
+character[step = "40"]{
+    top: 120px;
+    left: 610px;
+}
+character[step = "41"]{
+    top: 20px;
+    left: 610px;
+}
+character[step = "42"]{
+    top: 20px;
+    left: 710px;
+}
+character[step = "43"]{
+    top: 120px;
+    left: 710px;
+}
+character[step = "44"]{
+    top: 220px;
+    left: 710px;
 }
