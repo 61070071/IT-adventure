@@ -31,6 +31,11 @@ function gameStart(num){
     document.getElementById("theBoard").style.display = 'inline-block';
     document.getElementById("theTurn").style.display = 'inline-block';
     document.getElementById("theDice").style.display = 'inline-block';
+    document.getElementById("theLife").style.display = 'inline-block';
+    document.getElementById("player1_life").innerText = player.player1.life;
+    document.getElementById("player2_life").innerText = player.player2.life;
+    document.getElementById("player3_life").innerText = player.player3.life;
+    document.getElementById("player4_life").innerText = player.player4.life;
     console.log(player);
     b1 = document.getElementById('b1');
     turnStart()
@@ -40,8 +45,6 @@ function gameStart(num){
 function turnStart(){
     document.getElementById("theTurn").innerText = turn.toLocaleUpperCase()+"\'s Turn";
     thePlayer = document.getElementById(turn);
-    // console.log(thePlayer);
-    thePlayer.setAttribute("animate", "1");
 }
 
 function turnEnd(){
@@ -153,6 +156,9 @@ function moveReverse(reverse) {
     }, 200);
 }
 
+function updateLfe(noob) {
+    document.getElementById(noob+"_life").innerText = player[noob].life;
+}
 
 var b1 = document.getElementById('b1');
 var b1Bar = 0;
@@ -222,6 +228,7 @@ document.body.onkeyup = function (e) {
             win.innerText = b1.innerText + " Win";
             loser = b2.innerText;
             player[loser].life -= 1;
+            updateLfe(loser);
             b1Bar = 0;
             b2Bar = 0;
             b1.style.width = '0px';
@@ -242,6 +249,7 @@ document.body.onkeyup = function (e) {
             win.innerText = b2.innerText + " Win";
             loser = b1.innerText;
             player[loser].life -= 1;
+            updateLfe(loser);
             b1Bar = 0;
             b2Bar = 0;
             document.getElementById('battle').style.display = 'none';

@@ -1,6 +1,6 @@
 game{
     display: inline-block;
-    width:1590px;
+    width:1490px;
     height:750px;
     position:relative;
     overflow:hidden;
@@ -18,7 +18,18 @@ game{
 #theDice{
     display: none;
     position:absolute;
-    left: 10px;
+    left: 30px;
+    top: 620px;
+}
+#theLife{
+    display: none;
+    position: absolute;
+    top: 100px;
+}
+div#theLife h3{
+    margin-bottom: 40px;
+    line-height: 25px;
+    font-size: 25px;
 }
 dice{
     background: url("../imgs/dice_type_new_1.png");
@@ -26,7 +37,6 @@ dice{
     height:100px;
     position:absolute;
     left:0px;
-    top:400px;
     background-size: cover;
     text-align: center;
     font-size: 30px;
@@ -113,4 +123,16 @@ dice[score="0"]{
     left: 850px;
     width: 300px;
     top: 100px;
+}
+
+.life{
+    background-image: url("../imgs/life.jpeg");
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+}
+
+.theLife{
+    display: inline-flex;
+    height: 25px;
 }

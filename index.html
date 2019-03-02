@@ -9,11 +9,17 @@
 <body>
     <center><div id="selectPlayer">
         <h1 class="select" onclick="gameStart(this)">2 Player</h1><br>
-        <h1 class="select" onclick="gameStart(this)">3 Player</h1><br>
-        <h1 class="select" onclick="gameStart(this)">4 Player</h1>
+        <h1 class="select" onclick="">3 Player</h1><br>
+        <h1 class="select" onclick="">4 Player</h1>
     </div></center>
 	<game id="game">
         <div id="head" class="game"><h1><span id="theTurn"></span></h1></div>
+        <div  id="theLife">
+            <h3>Player1  x <span id="player1_life"></span></h3>
+            <h3>Player2  x <span id="player2_life"></span></h3>
+            <h3>Player3  x <span id="player3_life"></span></h3>
+            <h3>Player4  x <span id="player4_life"></span></h3>
+        </div>
         <div id="theBoard" class="game">
             <box id="battle">
                 <div class="plot"><div class="battle" id="b1"></div></div><br>
@@ -61,7 +67,7 @@
             <box id="g41" x="6" y="2">39</box>
             <box id="g42" x="6" y="1">40</box>
             <box id="g43" x="6" y="0">41</box>
-            <box id="g44" x="7" y="0">41</box>
+            <box id="g44" x="7" y="0">42</box>
             <box id="g45" x="7" y="1">43</box>
             <box id="g46" x="7" y="2"></box>
             <character id="player4" color="yellow" animate="0" step="0">p4</character>
