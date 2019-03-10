@@ -39,6 +39,7 @@ function gameStart(num){
     console.log(player);
     b1 = document.getElementById('b1');
     turnStart()
+
 }
 
 
@@ -51,20 +52,19 @@ function turnEnd(){
     if(turn === "player1"){
         thePlayer.setAttribute("animate", "0");
         turn = "player2";
-        turnStart();
     } else if (turn === "player2" && player.player3.status === 1) {
         thePlayer.setAttribute("animate", "0");
         turn = "player3";
-        turnStart();
     }  else if (turn === "player3" && player.player4.status === 1) {
         thePlayer.setAttribute("animate", "0");
         turn = "player4";
-        turnStart();
     } else {
         thePlayer.setAttribute("animate", "0");
         turn = "player1";
-        turnStart();
     }
+    setTimeout(function () {
+        turnStart();
+    }, 1000);
 }
 
 function diceFunction() {
@@ -166,58 +166,6 @@ var b2 = document.getElementById('b2');
 var b2Bar = 0;
 var fighting = 0;
 var loser = '';
-
-// document.onkeydown = document.body.onkeykeypress = function(e)
-// {
-//     if((e.keyCode == 65 || e.keyCode == 97) && document.getElementById("b1").getAttribute("battle") == "1") {
-//         e = e || window.event;
-//         b1Bar += 8;
-//         if(b1Bar >= 296){
-//             fighting = 0;
-//             b1.style.width = '296px';
-//             win.innerText = b1.innerText + " Win";
-//             loser = b2.innerText;
-//             player[loser].life -= 1;
-//             b1Bar = 0;
-//             b2Bar = 0;
-//             b1.style.width = '0px';
-//             b2.style.width = '0px';
-//             document.getElementById('battle').style.display = 'none';
-//             setTimeout(function () {
-//                 win.style.display = 'none';
-//                 reverseCounter()
-//             }, 1500);
-//
-//         } else {
-//             b1.style.width = b1Bar+'px';
-//         }
-//
-//
-//         // i.innerHTML = 'Hello';
-//         // document.body.style.backgroundColor = "#efeab6"
-//     } else if((e.keyCode == 76 || e.keyCode == 108) && document.getElementById("b2").getAttribute("battle") == "1") {
-//         e = e || window.event;
-//         b2Bar += 8;
-//         if(b2Bar >= 296){
-//             fighting = 0;
-//             b2.style.width = '296px';
-//             win.innerText = b2.innerText + " Win";
-//             loser = b1.innerText;
-//             player[loser].life -= 1;
-//             b1Bar = 0;
-//             b2Bar = 0;
-//             document.getElementById('battle').style.display = 'none';
-//             setTimeout(function () {
-//                 win.style.display = 'none';
-//                 reverseCounter()
-//             }, 1500);
-//         } else {
-//             b2.style.width = b2Bar+'px';
-//         }
-//         // i.innerHTML = 'Hello';
-//         // document.body.style.backgroundColor = "#efeab6"
-//     }
-// };
 
 document.body.onkeyup = function (e) {
     if (e.code === "KeyA" && fighting == 1){

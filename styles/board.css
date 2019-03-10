@@ -147,6 +147,7 @@ box#g11{
 box#g12{
     background-image: url("../imgs/board/board_11.png");
     background-size: cover;
+    border-radius: 0px 0px 40px 0px;
 }
 box#g13{
     background-image: url("../imgs/board/board_12.png");

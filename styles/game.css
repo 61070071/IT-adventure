@@ -1,3 +1,7 @@
+body{
+    background-image: url("../imgs/background.png");
+    background-size: cover;
+}
 game{
     display: inline-block;
     width:1490px;
@@ -43,7 +47,6 @@ dice{
 }
 
 #selectPlayer{
-    display: inline-block;
 }
 
 dice[score="2"]{
