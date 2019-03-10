@@ -1,8 +1,8 @@
 character{
     display:inline-block;
     position:absolute;
-    width: 80px;
-    height: 80px;
+    width: 180px;
+    height: 180px;
     background-image: url("../imgs/Player.png");
     background-size: cover;
     color: red;
@@ -11,14 +11,10 @@ character{
 #player1{
      color: red;
      background-image: url("../imgs/Charecter_Ome.gif");
-     width: 140px;
-     height: 140px;
  }
 #player2{
     color: blue;
     background-image: url("../imgs/Charecter_Jay.gif");
-    width: 140px;
-    height: 140px;
  }
 
 #player3{

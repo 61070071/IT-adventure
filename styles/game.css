@@ -1,11 +1,18 @@
+html{
+    width:100%;
+    height: 100%;
+}
 body{
     background-image: url("../imgs/background_fixed.png");
-    background-size: initial;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100%;
+    height: 100%;
 }
 game{
     display: none;
     width:3000px;
-    height:750px;
+    height:730px;
     position:relative;
     overflow:hidden;
 }
