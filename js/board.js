@@ -28,10 +28,7 @@ function gameStart(num){
         document.getElementById("player4").style.display = 'inline-block';
     }
     document.getElementById("selectPlayer").style.display = 'none';
-    document.getElementById("theBoard").style.display = 'inline-block';
-    document.getElementById("theTurn").style.display = 'inline-block';
-    document.getElementById("theDice").style.display = 'inline-block';
-    document.getElementById("theLife").style.display = 'inline-block';
+    document.querySelector('game').style.display = 'inline-block';
     document.getElementById("player1_life").innerText = player.player1.life;
     document.getElementById("player2_life").innerText = player.player2.life;
     document.getElementById("player3_life").innerText = player.player3.life;
