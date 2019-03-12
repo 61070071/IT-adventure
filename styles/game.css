@@ -11,7 +11,7 @@ body{
     -o-background-size: cover;
     background-size: initial;
     color: white;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
     overflow-y: hidden;
 }
 game{
@@ -158,3 +158,15 @@ dice[score="0"]{
     border: 3px black solid;
     border-radius: 20px;
 }
+
+#theEvent{
+    display: none;
+    position: fixed;
+    width: 400px;
+    height: 150px;
+    background-size: contain;
+    left: 45%;
+    top: 30px;
+    background: url("../imgs/Event/Event_1.png") no-repeat center;
+}
+

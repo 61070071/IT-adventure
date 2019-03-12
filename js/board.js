@@ -24,7 +24,10 @@ var player = {
         character: 0
     },
 };
+
+var eventBox = [4,5,9,10,12,13,14,16,17,19,20,24,27,30,33,35,37,40,41,43,45,47,48,51,52,57,58];
 function gameStart(num) {
+    scrollTo(0,0);
     turn = "player1";
     if (num.innerHTML === "3 Player") {
         player.player3.status = 1;
@@ -68,8 +71,9 @@ function turnEnd() {
         turn = "player1";
     }
     setTimeout(function () {
+        checkDisplay(player[turn].step, "end");
         turnStart();
-    }, 1000);
+    }, 700);
 }
 
 function diceFunction() {
@@ -99,6 +103,7 @@ function moveFunction(start, end) {
     setTimeout(function () {
         // console.log(start);
         thePlayer.setAttribute("step", start);
+        checkDisplay(start, "move");
         if (start < end) {
             moveFunction(start, end);
         } else {
@@ -116,6 +121,8 @@ function moveFunction(start, end) {
                 battle2.style.background = document.getElementById(battle2.innerText).getAttribute("color");
                 document.getElementById('theBattle').style.display = 'inline-block';
                 battle1.innerText = turn;
+            } else if (eventBox.indexOf(player[turn].step) != -1) {
+                eventFunction();
             } else {
                 turnEnd();
             }
@@ -124,8 +131,8 @@ function moveFunction(start, end) {
 
 }
 
-function reverseCounter() {
-    var reverse = player[loser].step - 5;
+function reverseCounter(back) {
+    var reverse = player[loser].step - back;
     if (reverse < 1) {
         reverse = 1;
     }
@@ -166,6 +173,35 @@ function updateLife(noob) {
     document.getElementById(noob + "_life").innerText = player[noob].life;
 }
 
+function checkDisplay(check, how) {
+    if (check >= 8 && check <= 21){
+        scrollTo(960, 0);
+    } else if (check >= 44 && check <= 53){
+        scrollTo(1100, 0)
+    } else if (check >= 53 || (check >= 46 && how === "end")){
+        scrollTo(1390, 0)
+    } else {
+        scrollTo(0,0)
+    }
+}
+
+var theEvent = document.querySelector("#theEvent");
+function eventFunction() {
+    num = Math.floor(Math.random()) + 1;
+    console.log(num);
+    switch (num) {
+        case 1:
+            theEvent.style.display = "inline-block";
+            setTimeout(() => {
+                moveCounter(5);
+                theEvent.style.display = 'none';
+            }, 1500);
+            break;
+        default:
+            break;
+    }
+}
+
 var battle1 = document.getElementById('battle1');
 var battle1Bar = 0;
 var battle2 = document.getElementById('battle2');
@@ -179,7 +215,6 @@ document.body.onkeyup = function (e) {
         if (battle1Bar >= 260) {
             fighting = 0;
             battle1.style.width = '256px';
-            win.innerText = battle1.innerText + " Win";
             loser = battle2.innerText;
             player[loser].life -= 1;
             updateLife(loser);
@@ -189,9 +224,8 @@ document.body.onkeyup = function (e) {
             battle2.style.width = '0px';
             document.getElementById('theBattle').style.display = 'none';
             setTimeout(function () {
-                win.style.display = 'none';
                 reverseCounter()
-            }, 1300);
+            }, 1000);
         } else {
             battle1.style.width = battle1Bar + 'px';
         }
@@ -200,7 +234,6 @@ document.body.onkeyup = function (e) {
         if (battle2Bar >= 260) {
             fighting = 0;
             battle2.style.width = '256px';
-            win.innerText = battle2.innerText + " Win";
             loser = battle1.innerText;
             player[loser].life -= 1;
             updateLife(loser);
@@ -208,12 +241,13 @@ document.body.onkeyup = function (e) {
             battle2Bar = 0;
             document.getElementById('theBattle').style.display = 'none';
             setTimeout(function () {
-                win.style.display = 'none';
                 reverseCounter()
-            }, 1500);
+            }, 1000);
         } else {
             battle2.style.width = battle2Bar + 'px';
         }
 
+    } else if (e.code === "Space"){
+        diceFunction();
     }
 };
