@@ -18,6 +18,7 @@ box{
     text-align: center;
     font-size: 30px;
     color: white;
+    opacity: 0.6;
 }
 
 box[y="1"]{--y:0px;}
@@ -45,11 +46,6 @@ box[x="15"]{--x:2100px;}
 box[x="16"]{--x:2240px;}
 box[x="17"]{--x:2380px;}
 
-ฺฺ#battle{
-    width: 300px;
-    height: 150px;
-    position:absolute;
-}
 
 box#b0{background-image: url("../imgs/board/board_00.png");}
 box#b1{background-image: url("../imgs/board/board_01.png");}

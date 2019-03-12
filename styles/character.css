@@ -1,12 +1,14 @@
 character{
     display:inline-block;
     position:absolute;
-    width: 180px;
-    height: 180px;
+    width: 175px;
+    height: 175px;
     background-image: url("../imgs/Player.png");
     background-size: cover;
     color: red;
-    transition: 0.2s;
+    transition: 0.1s;
+    top: var(--j);
+    left: var(--i);
 }
 #player1{
      color: red;
@@ -16,217 +18,66 @@ character{
     color: blue;
     background-image: url("../imgs/Charecter_Jay.gif");
  }
+#player3{color: green;display: none;}
+#player4{color: yellow;display: none;}
 
-#player3{
-    color: green;
-    display: none;
-}
-
-#player4{
-    color: yellow;
-    display: none;
-}
-
-character[step = "0"]{
-    top: 565px;
-    left: -20px;
-}
-
-character[step = "1"]{
-    top: 565px;
-    left: 80px;
-}
-
-character[step = "2"]{
-    top: 565px;
-    left: 180px;
-}
-character[step = "3"]{
-    top: 565px;
-    left: 280px;
-}
-character[step = "4"]{
-    top: 565px;
-    left: 380px;
-}
-character[step = "5"]{
-    top: 565px;
-    left: 480px;
-}
-
-character[step = "6"]{
-    top: 565px;
-    left: 580px;
-}
-
-character[step = "7"]{
-    top: 565px;
-    left: 680px;
-}
-character[step = "8"]{
-    top: 565px;
-    left: 780px;
-}
-character[step = "9"]{
-    top: 565px;
-    left: 880px;
-}
-character[step = "10"]{
-    top: 565px;
-    left: 980px;
-}
-character[step = "11"]{
-    top: 565px;
-    left: 1080px;
-}
-character[step = "12"]{
-    top: 465px;
-    left: 1080px;
-}
-character[step = "13"]{
-    top: 365px;
-    left: 1080px;
-    transition: 0.5s;
-    transform: rotateY(180deg);
-}
-character[step = "14"]{
-    top: 365px;
-    left: 980px;
-    transform: rotateY(180deg);
-}
-character[step = "15"]{
-    top: 365px;
-    left: 880px;
-    transform: rotateY(180deg);
-}
-character[step = "16"]{
-    top: 365px;
-    left: 780px;
-    transform: rotateY(180deg);
-}
-character[step = "17"]{
-    top: 365px;
-    left: 680px;
-    transform: rotateY(180deg);
-}
-character[step = "18"]{
-    top: 365px;
-    left: 580px;
-    transform: rotateY(180deg);
-}
-character[step = "19"]{
-    top: 365px;
-    left: 480px;
-    transform: rotateY(180deg);
-}
-character[step = "20"]{
-    top: 365px;
-    left: 380px;
-    transform: rotateY(180deg);
-}
-character[step = "21"]{
-    top: 365px;
-    left: 280px;
-    transform: rotateY(180deg);
- }
-character[step = "22"]{
-    top: 365px;
-    left: 180px;
-    transform: rotateY(180deg);
-}
-character[step = "23"]{
-    top: 365px;
-    left: 80px;
-    transform: rotateY(180deg);
-}
-character[step = "24"]{
-    top: 295px;
-    left: -20px;
-    transition: 0.5s;
-}
-character[step = "25"]{
-    top: 265px;
-    left: 80px;
-}
-character[step = "26"]{
-    top: 265px;
-    left: 180px;
-}
-character[step = "27"]{
-    top: 165px;
-    left: 180px;
-    transition: 0.5s;
-    transform: rotateY(180deg);
-}
-character[step = "28"]{
-    top: 165px;
-    left: 80px;
-    transform: rotateY(180deg);
-}
-character[step = "29"]{
-    top: 165px;
-    left: -20px;
-    transform: rotateY(180deg);
-}
-character[step = "30"]{
-     top: 65px;
-     left: -20px;
-    transform: rotateY(180deg);
- }
-character[step = "31"]{
-    top: -35px;
-    left: -20px;
-    transition: 0.5s;
-}
-character[step = "32"]{
-    top: -35px;
-    left: 80px;
-}
-character[step = "33"]{
-    top: -35px;
-    left: 180px;
-}
-character[step = "34"]{
-    top: -35px;
-    left: 280px;
-}
-character[step = "35"]{
-    top: -35px;
-    left: 380px;
-}
-character[step = "36"]{
-    top: -35px;
-    left: 480px;
-}
-character[step = "37"]{
-    top: 65px;
-    left: 480px;
-}
-character[step = "38"]{
-    top: 165px;
-    left: 480px;
-}
-character[step = "39"]{
-    top: 165px;
-    left: 580px;
-}
-character[step = "40"]{
-    top: 65px;
-    left: 580px;
-}
-character[step = "41"]{
-    top: -35px;
-    left: 580px;
-}
-character[step = "42"]{
-    top: -35px;
-    left: 680px;
-}
-character[step = "43"]{
-    top: 65px;
-    left: 680px;
-}
-character[step = "44"]{
-    top: 165px;
-    left: 680px;
-}
+character[step = "0"]{--i:-20px;--j:530px;}
+character[step = "1"]{--i:120px;--j:530px;}
+character[step = "2"]{--i:260px;--j:530px;}
+character[step = "3"]{--i:400px;--j:530px;}
+character[step = "4"]{--i:540px;--j:530px;}
+character[step = "5"]{--i:680px;--j:530px;}
+character[step = "6"]{--i:820px;--j:530px;}
+character[step = "7"]{--i:960px;--j:530px;}
+character[step = "8"]{--i:1100px;--j:530px;}
+character[step = "9"]{--i:1240px;--j:530px;}
+character[step = "10"]{--i:1380px;--j:530px;}
+character[step = "11"]{--i:1520px;--j:530px;}
+character[step = "12"]{--i:1660px;--j:530px;}
+character[step = "13"]{--i:1800px;--j:530px;}
+character[step = "14"]{--i:1800px;--j:390px;}
+character[step = "15"]{--i:1800px;--j:250px;}
+character[step = "16"]{--i:1660px;--j:250px;}
+character[step = "17"]{--i:1520px;--j:250px;}
+character[step = "18"]{--i:1380px;--j:250px;}
+character[step = "19"]{--i:1240px;--j:250px;}
+character[step = "20"]{--i:1240px;--j:390px;}
+character[step = "21"]{--i:1100px;--j:390px;}
+character[step = "22"]{--i:960px;--j:390px;}
+character[step = "23"]{--i:820px;--j:390px;}
+character[step = "24"]{--i:820px;--j:250px;}
+character[step = "25"]{--i:820px;--j:110px;}
+character[step = "26"]{--i:580px;--j:110px;}
+character[step = "27"]{--i:540px;--j:110px;}
+character[step = "28"]{--i:400px;--j:110px;}
+character[step = "29"]{--i:400px;--j:250px;}
+character[step = "30"]{--i:400px;--j:390px;}
+character[step = "31"]{--i:260px;--j:390px;}
+character[step = "32"]{--i:120px;--j:390px;}
+character[step = "33"]{--i:-20px;--j:390px;}
+character[step = "34"]{--i:-20px;--j:250px;}
+character[step = "35"]{--i:-20px;--j:110px;}
+character[step = "36"]{--i:-20px;--j:-30px;}
+character[step = "37"]{--i:120px;--j:-30px;}
+character[step = "38"]{--i:260px;--j:-30px;}
+character[step = "39"]{--i:400px;--j:-30px;}
+character[step = "40"]{--i:540px;--j:-30px;}
+character[step = "41"]{--i:680px;--j:-30px;}
+character[step = "42"]{--i:820px;--j:-30px;}
+character[step = "43"]{--i:960px;--j:-30px;}
+character[step = "44"]{--i:1100px;--j:-30px;}
+character[step = "45"]{--i:1240px;--j:-30px;}
+character[step = "46"]{--i:1380px;--j:-30px;}
+character[step = "47"]{--i:1520px;--j:-30px;}
+character[step = "48"]{--i:1520px;--j:110px;}
+character[step = "49"]{--i:1660px;--j:110px;}
+character[step = "50"]{--i:1800px;--j:110px;}
+character[step = "51"]{--i:1940px;--j:110px;}
+character[step = "52"]{--i:1940px;--j:-30px;}
+character[step = "53"]{--i:2080px;--j:-30px;}
+character[step = "54"]{--i:2220px;--j:-30px;}
+character[step = "55"]{--i:2360px;--j:-30px;}
+character[step = "56"]{--i:2360px;--j:110px;}
+character[step = "57"]{--i:2360px;--j:250px;}
+character[step = "58"]{--i:2360px;--j:390px;}
+character[step = "59"]{--i:2360px;--j:530px;}
