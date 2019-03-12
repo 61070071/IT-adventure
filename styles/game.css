@@ -167,6 +167,9 @@ dice[score="0"]{
     background-size: contain;
     left: 45%;
     top: 30px;
-    background: url("../imgs/Event/Event_1.png") no-repeat center;
 }
-
+#theEvent[event="1"]{background: url("../imgs/Event/Event_1.png") no-repeat center;}
+#theEvent[event="2"]{background: url("../imgs/Event/Event_2.png") no-repeat center;}
+#theEvent[event="3"]{background: url("../imgs/Event/Event_3.png") no-repeat center;}
+#theEvent[event="4"]{background: url("../imgs/Event/Event_4.png") no-repeat center;}
+#theEvent[event="5"]{background: url("../imgs/Event/Event_5.png") no-repeat center;}

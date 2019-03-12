@@ -135,14 +135,17 @@ function moveFunction(start, end) {
 }
 
 function reverseCounter(back) {
+    console.log('hi')
     var reverse = player[loser].step - back;
     if (reverse < 1) {
         reverse = 1;
     }
+    console.log('hi2')
     moveReverse(reverse);
 }
 
 function moveReverse(reverse) {
+    console.log('hi3')
     if (player[loser].step != 1) {
         player[loser].step--;
     }
@@ -190,13 +193,42 @@ function checkDisplay(check, how) {
 
 var theEvent = document.querySelector("#theEvent");
 function eventFunction() {
-    num = Math.floor(Math.random()) + 1;
+    num = Math.floor(Math.random()*5) + 1;
     console.log(num);
+    theEvent.setAttribute("event", num);
+    theEvent.style.display = "inline-block";
     switch (num) {
         case 1:
-            theEvent.style.display = "inline-block";
             setTimeout(() => {
                 moveCounter(5);
+                theEvent.style.display = 'none';
+            }, 1500);
+            break;
+        case 2:
+            setTimeout(() => {
+                if(player[turn].life < 5){
+                    player[turn].life += 1;
+                }
+                updateLife(turn);
+                theEvent.style.display = 'none';
+            }, 1500);
+            break;
+        case 3:
+            setTimeout(() => {
+                moveCounter(3);
+                theEvent.style.display = 'none';
+            }, 1500);
+            break;
+        case 4:
+            setTimeout(() => {
+                moveCounter(1);
+                theEvent.style.display = 'none';
+            }, 1500);
+            break;
+        case 5:
+            setTimeout(() => {
+                loser = turn;
+                reverseCounter(5);
                 theEvent.style.display = 'none';
             }, 1500);
             break;
