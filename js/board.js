@@ -191,6 +191,7 @@ function checkDisplay(check, how) {
     }
 }
 
+
 var theEvent = document.querySelector("#theEvent");
 function eventFunction() {
     num = Math.floor(Math.random()*5) + 1;
