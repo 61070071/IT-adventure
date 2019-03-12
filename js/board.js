@@ -104,6 +104,9 @@ function moveFunction(start, end) {
         // console.log(start);
         thePlayer.setAttribute("step", start);
         checkDisplay(start, "move");
+        if(start == 59){
+            alert(turn+" is Winner");
+        }
         if (start < end) {
             moveFunction(start, end);
         } else {
