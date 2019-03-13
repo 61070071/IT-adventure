@@ -104,9 +104,11 @@ function moveFunction(start, end) {
         // console.log(start);
         thePlayer.setAttribute("step", start);
         checkDisplay(start, "move");
-        if(start == 59){
-            alert(turn+" is Winner");
-        }
+        setTimeout(()=>{
+            if(start == 59){
+                alert(turn+" is Winner");
+            }
+        }, 1000)
         if (start < end) {
             moveFunction(start, end);
         } else {
@@ -135,17 +137,17 @@ function moveFunction(start, end) {
 }
 
 function reverseCounter(back) {
-    console.log('hi')
+    console.log('hi');
     var reverse = player[loser].step - back;
     if (reverse < 1) {
         reverse = 1;
     }
-    console.log('hi2')
+    console.log('hi2');
     moveReverse(reverse);
 }
 
 function moveReverse(reverse) {
-    console.log('hi3')
+    console.log('hi3');
     if (player[loser].step != 1) {
         player[loser].step--;
     }
@@ -168,6 +170,8 @@ function moveReverse(reverse) {
                 battle2.style.background = document.getElementById(battle2.innerText).getAttribute("color");
                 document.getElementById('theBattle').style.display = 'inline-block';
                 battle1.innerText = loser;
+            }  else if (eventBox.indexOf(player[loser].step) != -1) {
+                eventFunction();
             } else {
                 turnEnd();
             }

@@ -21,6 +21,7 @@ character{
 #player3{color: green;display: none;}
 #player4{color: yellow;display: none;}
 
+character{--i:2360px;--j:530px;}
 character[step = "0"]{--i:-20px;--j:530px;}
 character[step = "1"]{--i:120px;--j:530px;}
 character[step = "2"]{--i:260px;--j:530px;}
