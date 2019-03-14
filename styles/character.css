@@ -1,8 +1,8 @@
 character{
     display:inline-block;
     position:absolute;
-    width: 175px;
-    height: 175px;
+    width: 180px;
+    height: 180px;
     background-image: url("../imgs/Player.png");
     background-size: cover;
     color: red;
@@ -10,14 +10,23 @@ character{
     top: var(--j);
     left: var(--i);
 }
-#player1{
+character[character = "01"]{
+    color: red;
+    background-image: url("../imgs/Charecter_Jay.gif");
+}
+character[character = "02"]{
+    color: red;
+    background-image: url("../imgs/Charecter_Deen.gif");
+}
+character[character = "03"]{
      color: red;
      background-image: url("../imgs/Charecter_Ome.gif");
  }
-#player2{
-    color: blue;
-    background-image: url("../imgs/Charecter_Jay.gif");
- }
+character[character = "04"]{
+    color: red;
+    background-image: url("../imgs/Charecter_TinTo.gif");
+}
+
 #player3{color: green;display: none;}
 #player4{color: yellow;display: none;}
 

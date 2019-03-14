@@ -1,0 +1,81 @@
+
+#selectPlayer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.select:hover{
+    color: red;
+}
+#selectCharacter{
+    width: 1350px;
+    height: 400px;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.character{
+    width: 300px;
+    height: 300px;
+    border: 5px white solid;
+    position: absolute;
+    top: 50px;
+    left: var(--x);
+    background-size: cover;
+    border-radius: 90%/50%;
+}
+
+.character[selection="1"]{
+    border: 7px red solid;
+}
+
+#Jay{
+    background-image: url("../imgs/Charecter_Jay.gif");
+    --x: 0px;
+}
+
+#Deen{
+    background-image: url("../imgs/Charecter_Deen.gif");
+    --x: 350px;
+}
+
+#Ome{
+    background-image: url("../imgs/Charecter_Ome.gif");
+    --x: 700px;
+}
+
+#Tin{
+    background-image: url("../imgs/Charecter_TinTo.gif");
+    --x: 1050px;
+}
+
+#startGame{
+    display: none;
+    color: white;
+    font-size: 3em;
+    border: 1px white solid;
+    position: absolute;
+    width: 50px;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+}
+.child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#startGame:hover{
+    color: blue;
+    border: 1px blue solid;
+}
+
+
+
+

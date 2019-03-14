@@ -5,15 +5,9 @@
     <link rel="stylesheet" type="text/css" href="./styles/board.css">
     <link rel="stylesheet" type="text/css" href="./styles/character.css">
     <link rel="stylesheet" type="text/css" href="./styles/game.css">
+    <link rel="stylesheet" type="text/css" href="./styles/select.css">
 </head>
 <body>
-<center>
-    <div id="selectPlayer">
-        <h1 class="select" onclick="gameStart(this)">2 Player</h1><br>
-        <h1 class="select" onclick="">3 Player</h1><br>
-        <h1 class="select" onclick="">4 Player</h1>
-    </div>
-</center>
 <game id="game">
     <div id="theBoard" class="game">
         <box id="b0" x="0" y="4">start</box>
@@ -76,10 +70,10 @@
         <box id="b57" x="17" y="2">57</box>
         <box id="b58" x="17" y="3">58</box>
         <box id="b59" x="17" y="4">finish</box>
-        <character id="player4" color="yellow" animate="0" step="0">p4</character>
-        <character id="player3" color="green" animate="0" step="0">p3</character>
-        <character id="player2" color="blue" animate="0" step="0">p2</character>
-        <character id="player1" color="red" animate="0" step="0">p1</character>
+        <character id="player4" color="yellow" animate="0" character = "0" step="0">p4</character>
+        <character id="player3" color="green" animate="0" character = "0" step="0">p3</character>
+        <character id="player2" color="blue" animate="0" character = "0" step="0">p2</character>
+        <character id="player1" color="red" animate="0" character = "0" step="0">p1</character>
     </div>
     <div class="obtion">
         <div id="head" class="game">
@@ -108,9 +102,24 @@
     <div id="theEvent">
     </div>
 </game>
-
-
+<div id="select">
+    <div id="selectPlayer">
+        <h1 class="select" onclick="setPlayer(this)">2 Player</h1><br>
+        <h1 class="select" onclick="setPlayer(this)">3 Player</h1><br>
+        <h1 class="select" onclick="setPlayer(this)">4 Player</h1>
+    </div>
+    <div id="selectCharacter">
+        <div class="character" id="Jay" charId="01" onclick="setCharacter(this)"></div>
+        <div class="character" id="Deen" charId="02" onclick="setCharacter(this)"></div>
+        <div class="character" id="Ome" charId="03" onclick="setCharacter(this)"></div>
+        <div class="character" id="Tin" charId="04" onclick="setCharacter(this)"></div>
+    </div>
+    <div></div>
+    <div id="startGame" onclick="gameStart()">ok</div>
+</div>
+<script src="./js/player.js"></script>
 <script src="./js/board.js"></script>
+<script src="./js/select.js"></script>
 
 </body>
 </html>
