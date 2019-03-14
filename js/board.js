@@ -1,29 +1,3 @@
-var player = {
-    player1: {
-        step: 0,
-        life: 3,
-        status: 1,
-        character: 0
-    },
-    player2: {
-        step: 0,
-        life: 3,
-        status: 1,
-        character: 0
-    },
-    player3: {
-        step: 0,
-        life: 3,
-        status: 0,
-        character: 0
-    },
-    player4: {
-        step: 0,
-        life: 3,
-        status: 0,
-        character: 0
-    },
-};
 // var player = {
 //     player1: {
 //         step: 0,
@@ -52,19 +26,10 @@ var player = {
 // };
 
 var eventBox = [4,5,9,10,12,13,14,16,17,19,20,24,27,30,33,35,37,40,41,43,45,47,48,51,52,57,58];
-function gameStart(num) {
 
 function gameStart() {
     scrollTo(0,0);
     turn = "player1";
-    if (num.innerHTML === "3 Player") {
-        player.player3.status = 1;
-        document.getElementById("player3").style.display = 'inline-block';
-    } else if (num.innerText === "4 Player") {
-        player.player3.status = 1;
-        document.getElementById("player3").style.display = 'inline-block';
-        player.player4.status = 1;
-        document.getElementById("player4").style.display = 'inline-block';
     for(let c in player){
         if(player[c].status == 1){
             p = document.getElementById(c);
@@ -72,7 +37,6 @@ function gameStart() {
             p.setAttribute('character', player[c].character)
         }
     }
-    document.getElementById("selectPlayer").style.display = 'none';
     document.querySelector('game').style.display = 'inline-block';
     document.querySelector('#select').style.display = 'none';
     document.getElementById("player1_life").innerText = player.player1.life;
@@ -80,30 +44,24 @@ function gameStart() {
     document.getElementById("player3_life").innerText = player.player3.life;
     document.getElementById("player4_life").innerText = player.player4.life;
     console.log(player);
-    b1 = document.getElementById('b1');
     turnStart()
 
 }
 
 
 function turnStart() {
-    document.getElementById("theTurn").innerText = turn.toLocaleUpperCase() + "\'s Turn";
     // document.getElementById("theTurn").innerText = turn.toLocaleUpperCase() + "\'s Turn";
     thePlayer = document.getElementById(turn);
 }
 
 function turnEnd() {
     if (turn === "player1") {
-        thePlayer.setAttribute("animate", "0");
         turn = "player2";
     } else if (turn === "player2" && player.player3.status === 1) {
-        thePlayer.setAttribute("animate", "0");
         turn = "player3";
     } else if (turn === "player3" && player.player4.status === 1) {
-        thePlayer.setAttribute("animate", "0");
         turn = "player4";
     } else {
-        thePlayer.setAttribute("animate", "0");
         turn = "player1";
     }
     setTimeout(function () {
@@ -149,7 +107,6 @@ function moveFunction(start, end) {
             moveFunction(start, end);
         } else {
             player[turn].step = end;
-            for (var p in player) {
             for (let p in player) {
                 if (player[turn].step === player[p].step && turn !== p && player[turn].step != 1) {
                     battle2.innerText = p;
@@ -236,6 +193,7 @@ function checkDisplay(check, how) {
 
 var theEvent = document.querySelector("#theEvent");
 function eventFunction() {
+    num = Math.floor(Math.random()*9) + 1;
     console.log(num);
     theEvent.setAttribute("event", num);
     theEvent.style.display = "inline-block";
@@ -244,6 +202,7 @@ function eventFunction() {
             setTimeout(() => {
                 moveCounter(5);
                 theEvent.style.display = 'none';
+            }, 2000);
             break;
         case 2:
             setTimeout(() => {
@@ -253,27 +212,72 @@ function eventFunction() {
                 updateLife(turn);
                 theEvent.style.display = 'none';
                 turnEnd();
+            }, 2000);
             break;
         case 3:
             setTimeout(() => {
                 moveCounter(3);
                 theEvent.style.display = 'none';
+            }, 2000);
             break;
         case 4:
             setTimeout(() => {
                 moveCounter(1);
                 theEvent.style.display = 'none';
+            }, 2000);
             break;
         case 5:
             setTimeout(() => {
                 loser = turn;
                 reverseCounter(5);
                 theEvent.style.display = 'none';
+            }, 2000);
+            break;
+        case 6: // เพิ่มลือด 1
+            setTimeout(() =>{
+                if(player[turn].life < 5){
+                    player[turn].life += 1;
+                }
+                updateLife(turn);
+                theEvent.style.display = 'none';
+                turnEnd();
+            }, 2000);
+            break;
+        case 7: // เเเิ่มเลือด 3
+            setTimeout(() => {
+                if(player[turn].life < 5){
+                    player[turn].life += 3;
+                }
+                updateLife(turn);
+                theEvent.style.display = 'none';
+                turnEnd();
+            }, 2000);
+            break;
+        case 8: // ลดเลือด 3
+            setTimeout(() =>{
+                if(player[turn].life < 5){
+                    player[turn].life -= 3;
+                }
+                updateLife(turn);
+                theEvent.style.display = 'none';
+                turnEnd();
+            }, 2000);
+            break;
+        case 9:
+            setTimeout(() => {
+                if(player[turn].life < 5){
+                    player[turn].life += 1;
+                }
+                updateLife(turn);
+                theEvent.style.display = 'none';
+                turnEnd();
+            }, 2000);
             break;
         default:
             break;
     }
 }
+
 
 var battle1 = document.getElementById('battle1');
 var battle1Bar = 0;
