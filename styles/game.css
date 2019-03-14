@@ -3,7 +3,7 @@ html{
 }
 body{
     background-image: url("../imgs/background_fixed.png");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     width:100%;
     height: 100%;
     -webkit-background-size: cover;
