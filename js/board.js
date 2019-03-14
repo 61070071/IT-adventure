@@ -198,7 +198,7 @@ function checkDisplay(check, how) {
 
 var theEvent = document.querySelector("#theEvent");
 function eventFunction() {
-    num = Math.floor(Math.random()*5) + 1;
+    num = Math.floor(Math.random()*9) + 1;
     console.log(num);
     theEvent.setAttribute("event", num);
     theEvent.style.display = "inline-block";
@@ -207,7 +207,7 @@ function eventFunction() {
             setTimeout(() => {
                 moveCounter(5);
                 theEvent.style.display = 'none';
-            }, 1500);
+            }, 2000);
             break;
         case 2:
             setTimeout(() => {
@@ -216,26 +216,67 @@ function eventFunction() {
                 }
                 updateLife(turn);
                 theEvent.style.display = 'none';
-            }, 1500);
+                turnEnd();
+            }, 2000);
             break;
         case 3:
             setTimeout(() => {
                 moveCounter(3);
                 theEvent.style.display = 'none';
-            }, 1500);
+            }, 2000);
             break;
         case 4:
             setTimeout(() => {
                 moveCounter(1);
                 theEvent.style.display = 'none';
-            }, 1500);
+            }, 2000);
             break;
         case 5:
             setTimeout(() => {
                 loser = turn;
                 reverseCounter(5);
                 theEvent.style.display = 'none';
-            }, 1500);
+            }, 2000);
+            break;
+        case 6: // เพิ่มลือด 1
+            setTimeout(() =>{
+                if(player[turn].life < 5){
+                    player[turn].life += 1;
+                }
+                updateLife(turn);
+                theEvent.style.display = 'none';
+                turnEnd();
+            }, 2000);
+            break;
+        case 7: // เเเิ่มเลือด 3
+            setTimeout(() => {
+                if(player[turn].life < 5){
+                    player[turn].life += 3;
+                }
+                updateLife(turn);
+                theEvent.style.display = 'none';
+                turnEnd();
+            }, 2000);
+            break;
+        case 8: // ลดเลือด 3
+            setTimeout(() =>{
+                if(player[turn].life < 5){
+                    player[turn].life -= 3;
+                }
+                updateLife(turn);
+                theEvent.style.display = 'none';
+                turnEnd();
+            }, 2000);
+            break;
+        case 9:
+            setTimeout(() => {
+                if(player[turn].life < 5){
+                    player[turn].life += 1;
+                }
+                updateLife(turn);
+                theEvent.style.display = 'none';
+                turnEnd();
+            }, 2000);
             break;
         default:
             break;
