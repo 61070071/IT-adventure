@@ -193,7 +193,7 @@ function checkDisplay(check, how) {
 
 var theEvent = document.querySelector("#theEvent");
 function eventFunction() {
-    num = Math.floor(Math.random()*9) + 1;
+    num = Math.floor(Math.random()*27) + 1;
     console.log(num);
     theEvent.setAttribute("event", num);
     theEvent.style.display = "inline-block";
@@ -202,7 +202,7 @@ function eventFunction() {
             setTimeout(() => {
                 moveCounter(5);
                 theEvent.style.display = 'none';
-            }, 2000);
+            }, 3000);
             break;
         case 2:
             setTimeout(() => {
@@ -212,26 +212,26 @@ function eventFunction() {
                 updateLife(turn);
                 theEvent.style.display = 'none';
                 turnEnd();
-            }, 2000);
+            }, 3000);
             break;
         case 3:
             setTimeout(() => {
                 moveCounter(3);
                 theEvent.style.display = 'none';
-            }, 2000);
+            }, 3000);
             break;
         case 4:
             setTimeout(() => {
                 moveCounter(1);
                 theEvent.style.display = 'none';
-            }, 2000);
+            }, 3000);
             break;
         case 5:
             setTimeout(() => {
                 loser = turn;
                 reverseCounter(5);
                 theEvent.style.display = 'none';
-            }, 2000);
+            }, 3000);
             break;
         case 6: // เพิ่มลือด 1
             setTimeout(() =>{
@@ -241,7 +241,7 @@ function eventFunction() {
                 updateLife(turn);
                 theEvent.style.display = 'none';
                 turnEnd();
-            }, 2000);
+            }, 3000);
             break;
         case 7: // เเเิ่มเลือด 3
             setTimeout(() => {
@@ -251,7 +251,7 @@ function eventFunction() {
                 updateLife(turn);
                 theEvent.style.display = 'none';
                 turnEnd();
-            }, 2000);
+            }, 3000);
             break;
         case 8: // ลดเลือด 3
             setTimeout(() =>{
@@ -261,7 +261,7 @@ function eventFunction() {
                 updateLife(turn);
                 theEvent.style.display = 'none';
                 turnEnd();
-            }, 2000);
+            }, 3000);
             break;
         case 9:
             setTimeout(() => {
@@ -271,7 +271,151 @@ function eventFunction() {
                 updateLife(turn);
                 theEvent.style.display = 'none';
                 turnEnd();
-            }, 2000);
+            }, 3000);
+            break;
+        case 10:
+            setTimeout(() => {
+                loser = turn;
+                reverseCounter(2);
+                theEvent.style.display = 'none';
+            }, 3000);
+            break;
+        case 11:
+            setTimeout(() => {
+                moveCounter(3);
+                theEvent.style.display = 'none';
+            }, 3000);
+            break;
+        case 12:
+            setTimeout(() => {
+                loser = turn;
+                reverseCounter(4);
+                theEvent.style.display = 'none';
+            }, 3000);
+            break;
+        case 13:
+            setTimeout(() => {
+                if(player[turn].life < 5){
+                    player[turn].life += 1;
+                }
+                updateLife(turn);
+                theEvent.style.display = 'none';
+                turnEnd();
+            }, 3000);
+            break;
+        case 14:
+            setTimeout(() => {
+                loser = turn;
+                reverseCounter(2);
+                theEvent.style.display = 'none';
+            }, 3000);
+            break;
+        case 15:
+            setTimeout(() => {
+                if(player[turn].life < 5){
+                    player[turn].life -= 1;
+                }
+                updateLife(turn);
+                theEvent.style.display = 'none';
+                turnEnd();
+            }, 3000);
+            break;
+        case 16:
+            setTimeout(() => {
+                if(player[turn].life < 5){
+                    player[turn].life -= 1;
+                }
+                updateLife(turn);
+                theEvent.style.display = 'none';
+                turnEnd();
+            }, 3000);
+            break;
+        case 17:
+            setTimeout(() => {
+                if(player[turn].life < 5){
+                    player[turn].life -= 1;
+                }
+                updateLife(turn);
+                theEvent.style.display = 'none';
+                turnEnd();
+            }, 3000);
+            break;
+        case 18:
+            setTimeout(() => {
+                if(player[turn].life < 5){
+                    player[turn].life -= 1;
+                }
+                updateLife(turn);
+                theEvent.style.display = 'none';
+                turnEnd();
+            }, 3000);
+            break;
+        case 19:
+            setTimeout(() => {
+                if(player[turn].life < 5){
+                    player[turn].life += 1;
+                }
+                updateLife(turn);
+                theEvent.style.display = 'none';
+                turnEnd();
+            }, 3000);
+            break;
+        case 20:
+            setTimeout(() => {
+                if(player[turn].life < 5){
+                    player[turn].life -= 1;
+                }
+                updateLife(turn);
+                theEvent.style.display = 'none';
+                turnEnd();
+            }, 3000);
+            break;
+        case 21:
+            setTimeout(() => {
+                moveCounter(2);
+                theEvent.style.display = 'none';
+            }, 3000);
+            break;
+        case 22:
+            setTimeout(() => {
+                if(player[turn].life < 5){
+                    player[turn].life -= 1;
+                }
+                updateLife(turn);
+                theEvent.style.display = 'none';
+                turnEnd();
+            }, 3000);
+            break;
+        case 23:
+            setTimeout(() => {
+                loser = turn;
+                reverseCounter(4);
+                theEvent.style.display = 'none';
+            }, 3000);
+            break;
+        case 24:
+            setTimeout( () => {
+                theEvent.style.display = 'none';
+                turnEnd();
+            }, 3000);
+            break;
+        case 25:
+            setTimeout( () => {
+                theEvent.style.display = 'none';
+                turnEnd();
+            }, 3000);
+            break;
+        case 26:
+            setTimeout( () => {
+                theEvent.style.display = 'none';
+                turnEnd();
+            }, 3000);
+            break;
+        case 27:
+            setTimeout( () => {
+                theEvent.style.display = 'none';
+                turnEnd();
+            }, 3000);
             break;
         default:
             break;
