@@ -210,8 +210,8 @@ dice[score="0"] {
     display: none;
 }
 .fighter{
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     position: fixed;
     background-size: cover;
 }
