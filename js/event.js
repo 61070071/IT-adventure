@@ -6,11 +6,11 @@ var lockEventBox = [19,20,47,48,51,52];
 var theEvent = document.querySelector("#theEvent");
 
 function checkEvent(eventer) {
-    if(eventRandomBox.indexOf(player[mover].step) != -1){
+    if(eventRandomBox.indexOf(player[eventer].step) != -1){
         num = Math.floor(Math.random()*37) + 1;
-    } else if(eventGoodBox.indexOf(player[mover].step) != -1){
+    } else if(eventGoodBox.indexOf(player[eventer].step) != -1){
         num = Math.floor(Math.random()*11) + 1;
-    } else  if(eventBadBox.indexOf(player[mover].step) != -1){
+    } else  if(eventBadBox.indexOf(player[eventer].step) != -1){
         num = Math.floor(Math.random()*26) + 12;
     }
     eventFunction(eventer, num)
@@ -123,6 +123,7 @@ function eventFunction(eventer, num) {
         case 15:
             setTimeout(() => {
                 theEvent.style.display = 'none';
+                turnEnd();
             }, 3000);
             break;
         case 16:
@@ -245,6 +246,7 @@ function eventFunction(eventer, num) {
             setTimeout(() => {
                 player[eventer].move = 0;
                 theEvent.style.display = 'none';
+                turnEnd();
             }, 3000);
             break;
         default:
