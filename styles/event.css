@@ -36,8 +36,8 @@
 #theEvent[event="36"]{background: url("../imgs/Event/Event_R21.png") no-repeat center;}
 #theEvent[event="37"]{background: url("../imgs/Event/Event_R22.png") no-repeat center;}
 #theEvent[event="38"]{background: url("../imgs/Event P/Event_P1.png") no-repeat center;}
-#theEvent[event="39"]{background: url("../imgs/Event P/Event_P3.png") no-repeat center;}
-#theEvent[event="40"]{background: url("../imgs/Event P/Event_P5.png") no-repeat center;}
+#theEvent[event="39"]{background: url("../imgs/Event P/Event_P5.png") no-repeat center;}
+#theEvent[event="40"]{background: url("../imgs/Event P/Event_P3.png") no-repeat center;}
 #theEvent{
     display: none;
     position: fixed;

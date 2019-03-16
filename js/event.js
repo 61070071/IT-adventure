@@ -264,7 +264,7 @@ function eventFunction(eventer, num) {
             break;
         case 39:
             setTimeout(() => {
-                player[eventer].step = 0;
+                player[eventer].step = 58;
                 document.getElementById(eventer).setAttribute("step", 58);
                 theEvent.style.display = 'none';
                 turnEnd();
@@ -272,7 +272,7 @@ function eventFunction(eventer, num) {
             break;
         case 40:
             setTimeout(() => {
-                player[eventer].step = 0;
+                player[eventer].step = 36;
                 document.getElementById(eventer).setAttribute("step", 36);
                 theEvent.style.display = 'none';
                 turnEnd();

@@ -126,7 +126,8 @@ function moveFunction(end, mover) {
             player[mover].step = end;
             for (let p in player) {
                 if (player[mover].step === player[p].step && mover !== p && player[mover].step != 1 && player[p].life > 0) {
-                    battle2.innerText = p;
+                    text2 = p;
+                    fighter2.setAttribute('character', document.getElementById(p).getAttribute('character'));
                     fighting = 1
                 }
             }
@@ -134,9 +135,10 @@ function moveFunction(end, mover) {
                 battle1.style.width = '0px';
                 battle1.style.background = document.getElementById(mover).getAttribute("color");
                 battle2.style.width = '0px';
-                battle2.style.background = document.getElementById(battle2.innerText).getAttribute("color");
+                battle2.style.background = document.getElementById(text2).getAttribute("color");
                 document.getElementById('theBattle').style.display = 'inline-block';
-                battle1.innerText = mover;
+                fighter1.setAttribute('character', document.getElementById(mover).getAttribute('character'));
+                text1 = mover;
             } else if (eventBox.indexOf(player[mover].step) != -1) {
                 checkEvent(mover);
             } else {
@@ -168,7 +170,8 @@ function moveReverse(reverse, mover) {
         } else {
             for (let p in player) {
                 if (player[mover].step === player[p].step && mover !== p && player[mover].step != 1 && player[p].life > 0) {
-                    battle2.innerText = p;
+                    text2 = p;
+                    fighter2.setAttribute('character', document.getElementById(p).getAttribute('character'));
                     fighting = 1;
                 }
             }
@@ -176,9 +179,10 @@ function moveReverse(reverse, mover) {
                 battle1.style.width = '0px';
                 battle1.style.background = document.getElementById(mover).getAttribute("color");
                 battle2.style.width = '0px';
-                battle2.style.background = document.getElementById(battle2.innerText).getAttribute("color");
+                battle2.style.background = document.getElementById(text2).getAttribute("color");
                 document.getElementById('theBattle').style.display = 'inline-block';
-                battle1.innerText = mover;
+                fighter1.setAttribute('character', document.getElementById(mover).getAttribute('character'));
+                text1 = mover;
             }  else if (eventBox.indexOf(player[mover].step) != -1) {
                 checkEvent(mover);
             } else {
@@ -231,20 +235,24 @@ function gameEnd(w) {
 
 var battle1 = document.getElementById('battle1');
 var battle1Bar = 0;
+var fighter1 = document.getElementById('fighter1');
 var battle2 = document.getElementById('battle2');
 var battle2Bar = 0;
+var fighter2 = document.getElementById('fighter2');
 var fighting = 0;
 var loser = '';
 var winner = '';
+var text1 = '';
+var text2 = '';
 
 document.body.onkeyup = function (e) {
     if (e.code === "KeyA" && fighting == 1) {
-        battle1Bar += 8;
-        if (battle1Bar >= 260) {
+        battle1Bar += 16;
+        if (battle1Bar >= 500) {
             fighting = 0;
-            battle1.style.width = '256px';
-            winner = document.querySelector("#"+battle1.innerText);
-            loser = battle2.innerText;
+            battle1.style.width = '498';
+            winner = document.querySelector("#"+text1);
+            loser = text2;
             player[loser].life -= 1;
             updateLife(loser);
             battle1Bar = 0;
@@ -265,12 +273,12 @@ document.body.onkeyup = function (e) {
             battle1.style.width = battle1Bar + 'px';
         }
     } else if (e.code === "KeyL" && fighting == 1) {
-        battle2Bar += 8;
-        if (battle2Bar >= 260) {
+        battle2Bar += 16;
+        if (battle2Bar >= 500) {
             fighting = 0;
-            battle2.style.width = '256px';
-            winner = document.querySelector("#"+battle2.innerText);
-            loser = battle1.innerText;
+            battle2.style.width = '498px';
+            winner = document.querySelector("#"+text2);
+            loser = text1;
             player[loser].life -= 1;
             updateLife(loser);
             battle1Bar = 0;

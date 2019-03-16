@@ -90,15 +90,6 @@
             <h3>Player3 <img src="imgs/heart.gif"> x <span id="player3_life"></span></h3>
             <h3>Player4 <img src="imgs/heart.gif"> x <span id="player4_life"></span></h3>
         </div>
-        <div id="theBattle">
-            <div class="plot">
-                <div class="battle" id="battle1"></div>
-            </div>
-            <br>
-            <div class="plot">
-                <div class="battle" id="battle2"></div>
-            </div>
-        </div>
         <div id="theDice" class="game">
             <dice id="theDice1" score="1" onclick="diceFunction()"></dice>
             <dice id="theDice2" score="1" onclick="diceFunction()"></dice>
@@ -120,6 +111,20 @@
         <div class="character" id="Tin" charId="04" onclick="setCharacter(this)"><div class="selected"></div></div>
     </div>
     <div id="startGame" onclick="gameStart()"></div>
+</div>
+<div id="theBattle">
+    <div id="theWinner"></div>
+    <div id="press1"></div>
+    <div id="plot1">
+        <div class="battle" id="battle1"></div>
+    </div>
+    <div id="fighter1" class="fighter"></div>
+    <br>
+    <div id="press2"></div>
+    <div id="plot2">
+        <div class="battle" id="battle2"></div>
+    </div>
+    <div id="fighter2" class="fighter"></div>
 </div>
 <a id="restart" href="game.html"></a>
 <script src="./js/player.js"></script>
