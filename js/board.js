@@ -102,6 +102,9 @@ function moveFunction(end, mover) {
             reverseCounter(end-player[mover].step, mover);
         } else if(player[mover].step < end){
             moveFunction(end, mover);
+        } else if(player[mover].step == 59 && player[mover].step == end){
+            document.querySelector("game").display = 'none';
+            alert(mover.toUpperCase()+" Win");
         } else {
             player[mover].step = end;
             for (let p in player) {
