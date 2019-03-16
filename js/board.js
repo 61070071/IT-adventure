@@ -208,7 +208,7 @@ document.body.onkeyup = function (e) {
             battle2.style.width = '0px';
             winner.style.zIndex = "1";
             document.getElementById('theBattle').style.display = 'none';
-            winner.setAttribute("animate", "1");
+            winner.setAttribute("animate", "2");
             setTimeout(function () {
                 winner.setAttribute("animate", "0");
                 winner.style.zIndex = "0";
@@ -230,7 +230,7 @@ document.body.onkeyup = function (e) {
             battle2Bar = 0;
             winner.style.zIndex = "1";
             document.getElementById('theBattle').style.display = 'none';
-            winner.setAttribute("animate", "1");
+            winner.setAttribute("animate", "2");
             setTimeout(function () {
                 winner.setAttribute("animate", "0");
                 winner.style.zIndex = "0";

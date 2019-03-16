@@ -9,6 +9,7 @@ character{
     transition: 0.1s;
     top: var(--j);
     left: var(--i);
+    z-index: 1;
 }
 character[character = "01"]{
     color: red;
