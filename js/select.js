@@ -23,7 +23,7 @@ function characterMananger(change, name) {
     }
 }
 
-function checkCharacter(counter){
+function checkCharacter(){
     let count = 0;
     for(let c in player){
         if(player[c].status == 1 && player[c].character == 0){
