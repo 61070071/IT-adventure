@@ -26,6 +26,23 @@ character[character = "04"]{
     color: red;
     background-image: url("../imgs/Charecter_TinTo.gif");
 }
+character[character = "01"][animate = "1"]{
+    color: red;
+    background-image: url("../imgs/Attack_gif/Charecter_Jay_Attack.gif");
+}
+character[character = "02"][animate = "1"]{
+    color: red;
+    background-image: url("../imgs/Attack_gif/Charecter_Deen_Attack2.gif");
+}
+character[character = "03"][animate = "1"]{
+    color: red;
+    background-image: url("../imgs/Attack_gif/Charecter_Ome _Attack.gif");
+}
+character[character = "04"][animate = "1"]{
+    color: red;
+    background-image: url("../imgs/Attack_gif/Charecter_TinTo _Attack.gif");
+}
+
 #player2{color: blue;display: none;}
 #player3{color: green;display: none;}
 #player4{color: yellow;display: none;}
