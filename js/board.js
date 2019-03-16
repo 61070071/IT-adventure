@@ -114,8 +114,7 @@ function moveFunction(end, mover) {
         } else if(player[mover].step < end){
             moveFunction(end, mover);
         } else if(player[mover].step == 59 && player[mover].step == end){
-            document.querySelector("game").display = 'none';
-            alert(mover.toUpperCase()+" Win");
+            gameEnd(mover);
         } else {
             player[mover].step = end;
             for (let p in player) {
@@ -186,6 +185,17 @@ function updateLife(noob) {
     if(player[noob].life <= 0){
         document.getElementById(noob + "_life").innerText = "Dead";
         document.getElementById(noob).setAttribute("character", "05");
+        let count = 0;
+        let w = '';
+        for(let c in player){
+            if(player[c].life > 0 && player[c].status == 1){
+                count += 1;
+                w = c;
+            }
+        }
+        if (count == 1){
+            gameEnd(w);
+        }
     } else {
         document.getElementById(noob + "_life").innerText = player[noob].life;
     }
@@ -201,6 +211,15 @@ function checkDisplay(check, how) {
     } else {
         scrollTo(0,0)
     }
+}
+
+function gameEnd(w) {
+    setTimeout(()=>{
+        document.querySelector("game").style.display = 'none';
+    }, 1000);
+    setTimeout(() => {
+        alert(w.toUpperCase()+" Winner");
+    }, 1200)
 }
 
 var battle1 = document.getElementById('battle1');
