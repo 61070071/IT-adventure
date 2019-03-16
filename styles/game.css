@@ -11,8 +11,8 @@ body{
     -o-background-size: cover;
     background-size: initial;
     color: white;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    /* overflow-x: hidden; */
+    /* overflow-y: hidden; */
 }
 game{
     display: none;
@@ -163,4 +163,40 @@ h3 img{
     background-size: contain;
     left: 45%;
     top: 30px;
+}
+div#server {
+    background: url("../imgs/backG/server.gif");
+    width: 170px;
+    height: 170px;
+    position: absolute;
+    background-size: cover;
+    top: 263px;
+    left: 190px;
+}
+div#shopNougPloy {
+    background: url("../imgs/backG/ploy_shop.gif");
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-size: cover;
+    top: 395px;
+    left: 620px;
+}
+div#shop {
+    background: url("../imgs/backG/shop.gif");
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-size: cover;
+    top: 262px;
+    left: 1020px;
+}
+div#vending{
+    background: url("../imgs/backG/vending_machine.gif");
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    background-size: cover;
+    top: -7px;
+    left: 1750px;
 }
