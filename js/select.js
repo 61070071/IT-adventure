@@ -1,8 +1,9 @@
 function setPlayer(character) {
+    var num;
     document.querySelector("#selectPlayer").style.display = 'none';
-    if(character.innerText == '3 Player'){
+    if(character.classList.contains('select2') == true){
         player.player3.status = 1;
-    } else if(character.innerText == '4 Player'){
+    } else if(character.classList.contains('select3') == true){
         player.player3.status = 1;
         player.player4.status = 1;
     }

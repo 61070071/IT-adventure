@@ -4,9 +4,55 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin: 0;
 }
-.select:hover{
-    color: red;
+h1.select1{
+    background-image: url("../imgs/Pbutton/2P-1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 175px;    
+    margin: 0;
+
+}h1.select1:hover{
+    background-image: url("../imgs/Pbutton/2P-2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 175px;
+    margin: 0;
+}
+h1.select2{
+    background-image: url("../imgs/Pbutton/3P-1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 175px;
+    margin: 0;
+
+}h1.select2:hover{
+    background-image: url("../imgs/Pbutton/3P-2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 175px;
+    margin: 0;
+}
+h1.select3{
+    background-image: url("../imgs/Pbutton/4P-1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    margin: 0;
+
+}h1.select3:hover{
+    background-image: url("../imgs/Pbutton/4P-2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    margin: 0;
 }
 #selectCharacter{
     width: 1350px;
