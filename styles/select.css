@@ -54,6 +54,21 @@ h1.select3{
     height: 200px;
     margin: 0;
 }
+div#startGame{
+    background-image: url("../imgs/enterButton/Enter-1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    margin: 0;
+}div#startGame:hover{
+    background-image: url("../imgs/enterButton/Enter-2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    margin: 0;
+}
 #selectCharacter{
     width: 1350px;
     height: 400px;
@@ -101,9 +116,7 @@ h1.select3{
 
 #startGame{
     display: none;
-    color: white;
     font-size: 3em;
-    border: 1px white solid;
     position: absolute;
     width: 50px;
     top: 80%;
@@ -115,11 +128,6 @@ h1.select3{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-#startGame:hover{
-    color: blue;
-    border: 1px blue solid;
 }
 
 
