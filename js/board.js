@@ -223,7 +223,9 @@ function checkDisplay(check, how) {
 function gameEnd(w) {
     setTimeout(()=>{
         document.querySelector("game").style.display = 'none';
+        document.querySelector("#restart").style.display = 'inline-block';
         alert(w.toUpperCase()+" Winner");
+
     }, 1000);
 }
 

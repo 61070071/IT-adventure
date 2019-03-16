@@ -67,7 +67,7 @@ div#startGame{
     width: 250px;
     height: 250px;
 }
-a#rsetart{
+a#restart{
     background-image: url("../imgs/restartButton/restart-1.png");
     display: none;
     background-size: cover;
