@@ -67,6 +67,30 @@ div#startGame{
     width: 250px;
     height: 250px;
 }
+a#rsetart{
+    background-image: url("../imgs/restartButton/restart-1.png");
+    display: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+a#rsetart:hover{
+    background-image: url("../imgs/restartButton/restart-2.png");
+    display: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 #selectCharacter{
     width: 1350px;
     height: 400px;
