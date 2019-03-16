@@ -58,16 +58,14 @@ div#startGame{
     background-image: url("../imgs/enterButton/Enter-1.png");
     background-size: cover;
     background-repeat: no-repeat;
-    width: 200px;
-    height: 200px;
-    margin: 0;
+    width: 250px;
+    height: 250px;
 }div#startGame:hover{
     background-image: url("../imgs/enterButton/Enter-2.png");
     background-size: cover;
     background-repeat: no-repeat;
-    width: 200px;
-    height: 200px;
-    margin: 0;
+    width: 250px;
+    height: 250px;
 }
 #selectCharacter{
     width: 1350px;
@@ -116,10 +114,9 @@ div#startGame{
 
 #startGame{
     display: none;
-    font-size: 3em;
     position: absolute;
     width: 50px;
-    top: 80%;
+    top: 73%;
     left: 50%;
     transform: translate(-50%, -20%);
 }
