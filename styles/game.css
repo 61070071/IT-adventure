@@ -28,9 +28,27 @@ game{
 }
 #theTurn{
     position:absolute;
-    padding: 10px;
+    width: 240px;
+    height: 240px;
     color: white;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%, 2%);
+    background-size: cover;
 }
+#theTurn[character = "01"]{
+    background-image: url("../imgs/Charecter_Jay.gif");
+}
+#theTurn[character = "02"]{
+    background-image: url("../imgs/Charecter_Deen.gif");
+}
+#theTurn[character = "03"]{
+    background-image: url("../imgs/Charecter_Ome.gif");
+}
+#theTurn[character = "04"]{
+    background-image: url("../imgs/Charecter_TinTo.gif");
+}
+
 #theDice{
     position:absolute;
     left: 0px;
@@ -38,11 +56,12 @@ game{
 }
 #theLife{
     position: absolute;
-    top: 100px;
+    top: 240px;
     color: white;
+    padding: 60px;
 }
 div#theLife h3{
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     line-height: 25px;
     font-size: 25px;
 }

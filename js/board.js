@@ -53,7 +53,7 @@ function gameStart() {
 }
 
 function turnStart() {
-    // document.getElementById("theTurn").innerText = turn.toLocaleUpperCase() + "\'s Turn";
+    document.querySelector("#theTurn").setAttribute('character', document.getElementById(turn).getAttribute('character'));
     if(player[turn].move === 0){
         player[turn].move = 1;
         turnEnd();
