@@ -11,8 +11,8 @@ body{
     -o-background-size: cover;
     background-size: initial;
     color: white;
-    /* overflow-x: hidden; */
-    /* overflow-y: hidden; */
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 game{
     display: none;
