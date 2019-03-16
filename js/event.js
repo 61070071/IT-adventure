@@ -4,7 +4,6 @@ var eventGoodBox = [5,14,35];
 var eventBadBox = [10,13,16,24,33,37,41,45,56,57,58];
 var lockEventBox = [19,20,47,48,51,52];
 var theEvent = document.querySelector("#theEvent");
-
 function checkEvent(eventer) {
     if(eventRandomBox.indexOf(player[eventer].step) != -1){
         num = Math.floor(Math.random()*37) + 1;
@@ -12,6 +11,12 @@ function checkEvent(eventer) {
         num = Math.floor(Math.random()*11) + 1;
     } else  if(eventBadBox.indexOf(player[eventer].step) != -1){
         num = Math.floor(Math.random()*22) + 16;
+    } else if(player[eventer].step == 19 || player[eventer].step == 20){
+        num = 38;
+    } else if(player[eventer].step == 47 || player[eventer].step == 48){
+        num = 39;
+    } else if(player[eventer].step == 51 || player[eventer].step == 52){
+        num = 40;
     }
     eventFunction(eventer, num)
 }
@@ -249,6 +254,31 @@ function eventFunction(eventer, num) {
                 turnEnd();
             }, 3000);
             break;
+        case 38:
+            setTimeout(() => {
+                player[eventer].step = 0;
+                document.getElementById(eventer).setAttribute("step", 0);
+                theEvent.style.display = 'none';
+                turnEnd();
+            }, 3000);
+            break;
+        case 39:
+            setTimeout(() => {
+                player[eventer].step = 0;
+                document.getElementById(eventer).setAttribute("step", 58);
+                theEvent.style.display = 'none';
+                turnEnd();
+            }, 3000);
+            break;
+        case 40:
+            setTimeout(() => {
+                player[eventer].step = 0;
+                document.getElementById(eventer).setAttribute("step", 36);
+                theEvent.style.display = 'none';
+                turnEnd();
+            }, 3000);
+            break;
+        break;
         default:
             break;
     }
