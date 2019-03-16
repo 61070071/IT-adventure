@@ -28,11 +28,18 @@
 function gameStart() {
     scrollTo(0,0);
     turn = "player1";
+    let lifeDisplay = document.querySelector("#theLife").childNodes;
+    let i = 1;
     for(let c in player){
         if(player[c].status == 1){
             let p = document.getElementById(c);
             p.style.display = 'inline-block';
             p.setAttribute('character', player[c].character)
+            lifeDisplay[i].style.display = 'inline-block';
+            i += 2;
+        } else {
+            lifeDisplay[i].style.display = 'none'
+            i += 2;
         }
     }
     document.querySelector('game').style.display = 'inline-block';
@@ -216,10 +223,8 @@ function checkDisplay(check, how) {
 function gameEnd(w) {
     setTimeout(()=>{
         document.querySelector("game").style.display = 'none';
-    }, 1000);
-    setTimeout(() => {
         alert(w.toUpperCase()+" Winner");
-    }, 1200)
+    }, 1000);
 }
 
 var battle1 = document.getElementById('battle1');
