@@ -139,6 +139,10 @@ dice[score="0"]{
     display: inline-flex;
     height: 25px;
 }
+h3 img{
+    height: 20px; 
+    width: 20px;
+}
 .obtion{
     position: fixed;
     height: 720px;
