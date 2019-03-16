@@ -88,24 +88,20 @@ function diceFunction() {
 }
 
 function moveCounter(move, mover) {
-    start = player[mover].step;
-    end = start + move;
-    moveFunction(start, end, mover)
+    end =  player[mover].step + move;
+    moveFunction(end, mover)
 }
 
-function moveFunction(start, end, mover) {
-    start++;
+function moveFunction(end, mover) {
+    player[mover].step++;
     setTimeout(function () {
         // console.log(start);
-        document.querySelector("#"+mover).setAttribute("step", start);
-        checkDisplay(start, "move");
-        setTimeout(()=>{
-            if(start == 59){
-                alert(turn+" is Winner");
-            }
-        }, 1000)
-        if (start < end) {
-            moveFunction(start, end, mover);
+        document.querySelector("#"+mover).setAttribute("step", player[mover].step);
+        checkDisplay(player[mover].step, "move");
+        if (player[mover].step == 59 && player[mover].step < end) {
+            reverseCounter(end-player[mover].step, mover);
+        } else if(player[mover].step < end){
+            moveFunction(end, mover);
         } else {
             player[mover].step = end;
             for (let p in player) {
@@ -143,7 +139,7 @@ function moveReverse(reverse, mover) {
     if (player[mover].step != 0) {
         player[mover].step--;
     }
-    checkDisplay(start, "move");
+    checkDisplay(player[mover].step, "move");
     theLoser = document.getElementById(mover);
     setTimeout(function () {
         theLoser.setAttribute("step", player[mover].step);

@@ -11,7 +11,7 @@ function checkEvent(eventer) {
     } else if(eventGoodBox.indexOf(player[eventer].step) != -1){
         num = Math.floor(Math.random()*11) + 1;
     } else  if(eventBadBox.indexOf(player[eventer].step) != -1){
-        num = Math.floor(Math.random()*26) + 12;
+        num = Math.floor(Math.random()*22) + 16;
     }
     eventFunction(eventer, num)
 }
