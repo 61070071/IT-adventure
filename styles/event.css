@@ -35,3 +35,13 @@
 #theEvent[event="35"]{background: url("../imgs/Event/Event_R20.png") no-repeat center;}
 #theEvent[event="36"]{background: url("../imgs/Event/Event_R21.png") no-repeat center;}
 #theEvent[event="37"]{background: url("../imgs/Event/Event_R22.png") no-repeat center;}
+#theEvent{
+    display: none;
+    position: fixed;
+    width: 400px;
+    height: 275px;
+    background-size: contain;
+    left: 45%;
+    top: 30px;
+    z-index: 5;
+}

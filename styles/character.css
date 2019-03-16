@@ -40,8 +40,13 @@ character[character = "03"][animate = "1"]{
     background-image: url("../imgs/Attack_gif/Charecter_Ome _Attack.gif");
 }
 character[character = "04"][animate = "1"]{
+     color: red;
+     background-image: url("../imgs/Attack_gif/Charecter_TinTo _Attack.gif");
+ }
+
+character[character = "05"]{
     color: red;
-    background-image: url("../imgs/Attack_gif/Charecter_TinTo _Attack.gif");
+    background-image: url("../imgs/RIP-1.png");
 }
 
 #player2{color: blue;display: none;}

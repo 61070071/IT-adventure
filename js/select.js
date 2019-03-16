@@ -15,7 +15,7 @@ function characterMananger(change, name) {
     for(let c in player){
         if(player[c].character == 0 && player[c].status == 1 && change == 1){
             player[c].character = name;
-            document.querySelector("[charId ="+"\""+name+"\""+"]").innerText = c;
+            document.querySelector("[charId ="+"\""+name+"\""+"] div").setAttribute("player", c);
             change -= 1;
             checkCharacter();
             break;
@@ -50,7 +50,7 @@ function setCharacter(theChar) {
         for(let c in player){
             if(theChar.getAttribute("charId") == player[c].character){
                 player[c].character = 0;
-                theChar.innerText = '';
+                theChar.childNodes[0].setAttribute("player", "")
             }
         }
     }

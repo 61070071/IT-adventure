@@ -30,7 +30,7 @@ function gameStart() {
     turn = "player1";
     for(let c in player){
         if(player[c].status == 1){
-            p = document.getElementById(c);
+            let p = document.getElementById(c);
             p.style.display = 'inline-block';
             p.setAttribute('character', player[c].character)
         }
@@ -43,12 +43,11 @@ function gameStart() {
     document.getElementById("player4_life").innerText = player.player4.life;
     console.log(player);
     turnStart()
-
 }
 
 function turnStart() {
     // document.getElementById("theTurn").innerText = turn.toLocaleUpperCase() + "\'s Turn";
-    if(player[turn].move == 0){
+    if(player[turn].move === 0){
         player[turn].move = 1;
         turnEnd();
     }
@@ -58,12 +57,24 @@ function turnStart() {
 function turnEnd() {
     if (turn === "player1") {
         turn = "player2";
+        if(player[turn].life <= 0){
+            turnEnd();
+        }
     } else if (turn === "player2" && player.player3.status === 1) {
         turn = "player3";
+        if(player[turn].life <= 0){
+            turnEnd();
+        }
     } else if (turn === "player3" && player.player4.status === 1) {
         turn = "player4";
+        if(player[turn].life <= 0){
+            turnEnd();
+        }
     } else {
         turn = "player1";
+        if(player[turn].life <= 0){
+            turnEnd();
+        }
     }
     setTimeout(function () {
         checkDisplay(player[turn].step, "end");
@@ -108,7 +119,7 @@ function moveFunction(end, mover) {
         } else {
             player[mover].step = end;
             for (let p in player) {
-                if (player[mover].step === player[p].step && mover !== p && player[mover].step != 1) {
+                if (player[mover].step === player[p].step && mover !== p && player[mover].step != 1 && player[p].life > 0) {
                     battle2.innerText = p;
                     fighting = 1
                 }
@@ -150,7 +161,7 @@ function moveReverse(reverse, mover) {
             moveReverse(reverse, mover)
         } else {
             for (let p in player) {
-                if (player[mover].step === player[p].step && mover !== p && player[mover].step != 1) {
+                if (player[mover].step === player[p].step && mover !== p && player[mover].step != 1 && player[p].life > 0) {
                     battle2.innerText = p;
                     fighting = 1;
                 }
@@ -172,7 +183,12 @@ function moveReverse(reverse, mover) {
 }
 
 function updateLife(noob) {
-    document.getElementById(noob + "_life").innerText = player[noob].life;
+    if(player[noob].life <= 0){
+        document.getElementById(noob + "_life").innerText = "Dead";
+        document.getElementById(noob).setAttribute("character", "05");
+    } else {
+        document.getElementById(noob + "_life").innerText = player[noob].life;
+    }
 }
 
 function checkDisplay(check, how) {
@@ -209,13 +225,15 @@ document.body.onkeyup = function (e) {
             battle2Bar = 0;
             battle1.style.width = '0px';
             battle2.style.width = '0px';
-            winner.style.zIndex = "1";
+            winner.style.zIndex = "2";
             document.getElementById('theBattle').style.display = 'none';
-            winner.setAttribute("animate", "2");
+            winner.setAttribute("animate", "1");
             setTimeout(function () {
                 winner.setAttribute("animate", "0");
                 winner.style.zIndex = "0";
-                reverseCounter(5, loser)
+                if(player[loser].life > 0){
+                    reverseCounter(5, loser);
+                }
             }, 3500);
         } else {
             battle1.style.width = battle1Bar + 'px';
@@ -231,13 +249,15 @@ document.body.onkeyup = function (e) {
             updateLife(loser);
             battle1Bar = 0;
             battle2Bar = 0;
-            winner.style.zIndex = "1";
+            winner.style.zIndex = "2";
             document.getElementById('theBattle').style.display = 'none';
-            winner.setAttribute("animate", "2");
+            winner.setAttribute("animate", "1");
             setTimeout(function () {
                 winner.setAttribute("animate", "0");
                 winner.style.zIndex = "0";
-                reverseCounter(5, loser)
+                if(player[loser].life > 0){
+                    reverseCounter(5, loser);
+                }
             }, 3500);
         } else {
             battle2.style.width = battle2Bar + 'px';

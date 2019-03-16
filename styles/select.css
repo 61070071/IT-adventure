@@ -120,12 +120,35 @@ div#startGame{
     left: 50%;
     transform: translate(-50%, -20%);
 }
-.child {
-    position: absolute;
+
+.selected{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    position: absolute;
 }
+
+.selected[player = "player1"]{
+   background-image: url("../imgs/Pbutton/1P-1.png");
+}
+.selected[player = "player2"]{
+    background-image: url("../imgs/Pbutton/2P-1.png");
+}
+.selected[player = "player3"]{
+    background-image: url("../imgs/Pbutton/3P-1.png");
+}
+.selected[player = "player4"]{
+    background-image: url("../imgs/Pbutton/4P-1.png");
+}
+
+/*.child {*/
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+/*}*/
 
 
 

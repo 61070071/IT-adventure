@@ -153,17 +153,9 @@ h3 img{
     background-size: cover;
     border: 3px black solid;
     border-radius: 20px;
+    z-index: 5;
 }
 
-#theEvent{
-    display: none;
-    position: fixed;
-    width: 400px;
-    height: 275px;
-    background-size: contain;
-    left: 45%;
-    top: 30px;
-}
 div#server {
     background: url("../imgs/backG/server.gif");
     width: 170px;
