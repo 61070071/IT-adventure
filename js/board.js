@@ -58,6 +58,7 @@ function turnStart() {
         player[turn].move = 1;
         turnEnd();
     }
+    getDice = 1;
     thePlayer = document.getElementById(turn);
 }
 
@@ -90,7 +91,8 @@ function turnEnd() {
 }
 
 function diceFunction() {
-    if (fighting === 0) {
+    if (fighting === 0  && getDice == 1) {
+        getDice = 0;
         dice1 = Math.floor(Math.random() * 6) + 1;
         dice2 = Math.floor(Math.random() * 6) + 1;
         theDice1 = document.getElementById("theDice1");
