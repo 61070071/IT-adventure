@@ -79,7 +79,7 @@ a#restart{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-a#rsetart:hover{
+a#restart:hover{
     background-image: url("../imgs/restartButton/restart-2.png");
     display: none;
     background-size: cover;
