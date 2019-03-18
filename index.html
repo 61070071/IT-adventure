@@ -49,5 +49,14 @@
               </audio>
         <div class="logo"></div>
         <a class="start" href="game.html"></a>
+        <script>    
+        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+            if(!isChrome){
+              $('#iframeAudio').remove()
+            }
+          else{
+             $('#playAudio').remove()
+          }
+          </script>
     </body>
 </html>
