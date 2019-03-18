@@ -11,17 +11,6 @@ function setPlayer(character) {
 
 }
 
-function characterMananger(change, name) {
-    for(let c in player){
-        if(player[c].character == 0 && player[c].status == 1 && change == 1){
-            player[c].character = name;
-            document.querySelector("[charId ="+"\""+name+"\""+"] div").setAttribute("player", c);
-            change -= 1;
-            checkCharacter();
-            break;
-        }
-    }
-}
 
 function checkCharacter(){
     let count = 0;

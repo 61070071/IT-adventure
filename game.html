@@ -131,6 +131,19 @@
 <audio autoplay loop id="playAudio">
       <source src="source/Sneaky_Snitch.mp3">
     </audio>
+    <script>
+            function characterMananger(change, name) {
+                for(let c in player){
+                    if(player[c].character == 0 && player[c].status == 1 && change == 1){
+                        player[c].character = name;
+                        document.querySelector("[charId ="+"\""+name+"\""+"] div").setAttribute("player", c);
+                        change -= 1;
+                        checkCharacter();
+                        break;
+                    }
+                }
+            }
+                    </script>
 <a id="restart" href="game.html"></a>
 <script src="./js/player.js"></script>
 <script src="./js/board.js"></script>
