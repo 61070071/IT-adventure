@@ -71,10 +71,10 @@
         <box id="b57" x="17" y="2">57</box>
         <box id="b58" x="17" y="3">58</box>
         <box id="b59" x="17" y="4">finish</box>
-        <character id="player4" color="yellow" animate="0" character = "0" step="0">p4</character>
-        <character id="player3" color="green" animate="0" character = "0" step="0">p3</character>
-        <character id="player2" color="blue" animate="0" character = "0" step="0">p2</character>
-        <character id="player1" color="red" animate="0" character = "0" step="0">p1</character>
+        <character id="player4" color="yellow" animate="0" character="0" step="0">p4</character>
+        <character id="player3" color="green" animate="0" character="0" step="0">p3</character>
+        <character id="player2" color="blue" animate="0" character="0" step="0">p2</character>
+        <character id="player1" color="red" animate="0" character="0" step="0">p1</character>
         <div id="server"></div>
         <div id="shopNougPloy"></div>
         <div id="shop"></div>
@@ -85,7 +85,7 @@
 
         </div>
         <div id="theLife">
-            <h3>Player1 <img src="imgs/heart.gif"> x <span id="player1_life"></span> </h3>
+            <h3>Player1 <img src="imgs/heart.gif"> x <span id="player1_life"></span></h3>
             <h3>Player2 <img src="imgs/heart.gif"> x <span id="player2_life"></span></h3>
             <h3>Player3 <img src="imgs/heart.gif"> x <span id="player3_life"></span></h3>
             <h3>Player4 <img src="imgs/heart.gif"> x <span id="player4_life"></span></h3>
@@ -105,10 +105,18 @@
         <h1 id="select3" class="select3" onclick="setPlayer(this)"></h1>
     </div>
     <div id="selectCharacter">
-        <div class="character" id="Jay" charId="01" onclick="setCharacter(this)"><div class="selected"></div></div>
-        <div class="character" id="Deen" charId="02" onclick="setCharacter(this)"><div class="selected"></div></div>
-        <div class="character" id="Ome" charId="03" onclick="setCharacter(this)"><div class="selected"></div></div>
-        <div class="character" id="Tin" charId="04" onclick="setCharacter(this)"><div class="selected"></div></div>
+        <div class="character" id="Jay" charId="01" onclick="setCharacter(this)">
+            <div class="selected"></div>
+        </div>
+        <div class="character" id="Deen" charId="02" onclick="setCharacter(this)">
+            <div class="selected"></div>
+        </div>
+        <div class="character" id="Ome" charId="03" onclick="setCharacter(this)">
+            <div class="selected"></div>
+        </div>
+        <div class="character" id="Tin" charId="04" onclick="setCharacter(this)">
+            <div class="selected"></div>
+        </div>
     </div>
     <div id="startGame" onclick="gameStart()"></div>
 </div>
@@ -126,20 +134,11 @@
     </div>
     <div id="fighter2" class="fighter"></div>
 </div>
-<iframe src="source/Sneaky_Snitch.mp3" allow="autoplay" style="display:none" id="iframeAudio">
-</iframe>
 <audio autoplay loop id="playAudio">
-      <source src="source/Sneaky_Snitch.mp3">
-    </audio>
-    <script>    
-            var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-                if(!isChrome){
-                  $('#iframeAudio').remove()
-                }
-              else{
-                 $('#playAudio').remove()
-              }
-              </script>
+    <source src="source/Sneaky_Snitch.mp3">
+</audio>
+<script>
+</script>
 <a id="restart" href="game.html"></a>
 <script src="./js/player.js"></script>
 <script src="./js/board.js"></script>
