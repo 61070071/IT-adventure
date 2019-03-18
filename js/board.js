@@ -301,11 +301,6 @@ document.body.onkeyup = function (e) {
                 winner.style.zIndex = "0";
                 if(player[loser].life > 0){
                     reverseCounter(5, loser);
-                    if (eventBox.indexOf(player[text2].step) != -1) {
-                        checkEvent(text2);
-                    }
-                }  else if (eventBox.indexOf(player[text2].step) != -1) {
-                    checkEvent(text2);
                 } else {
                     turnEnd();
                 }

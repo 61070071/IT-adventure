@@ -42,7 +42,7 @@
         <counts>
           <entry key="css" value="799" />
           <entry key="html" value="530" />
-          <entry key="js" value="2510" />
+          <entry key="js" value="2514" />
           <entry key="txt" value="58" />
         </counts>
       </usages-collector>
@@ -50,7 +50,7 @@
         <counts>
           <entry key="CSS" value="799" />
           <entry key="HTML" value="530" />
-          <entry key="JavaScript" value="2510" />
+          <entry key="JavaScript" value="2514" />
           <entry key="PLAIN_TEXT" value="58" />
         </counts>
       </usages-collector>
@@ -61,7 +61,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/board.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-366">
+            <state relative-caret-position="420">
               <caret line="96" column="44" selection-start-line="96" selection-start-column="44" selection-end-line="96" selection-end-column="44" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -410,7 +410,7 @@
       <workItem from="1552577884661" duration="2884000" />
       <workItem from="1552725256408" duration="33723000" />
       <workItem from="1552803316093" duration="784000" />
-      <workItem from="1552893070885" duration="9820000" />
+      <workItem from="1552893070885" duration="11107000" />
     </task>
     <task id="LOCAL-00001" summary="IT logo adventure">
       <created>1552323050256</created>
@@ -493,13 +493,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164516000" />
+    <option name="totallyTimeSpent" value="165803000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16787839" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16787839" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -510,9 +510,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49834764" visible="true" weight="0.111409396" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4976867" visible="true" weight="0.111409396" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50165236" side_tool="true" weight="0.32751676" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="10" sideWeight="0.50231326" side_tool="true" visible="true" weight="0.111409396" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24966443" />
@@ -636,7 +636,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/board.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-366">
+        <state relative-caret-position="420">
           <caret line="96" column="44" selection-start-line="96" selection-start-column="44" selection-end-line="96" selection-end-column="44" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
