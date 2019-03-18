@@ -198,6 +198,7 @@ function updateLife(noob) {
     if(player[noob].life <= 0){
         document.getElementById(noob + "_life").innerText = "Dead";
         document.getElementById(noob).setAttribute("character", "05");
+        document.getElementById(noob).style.zIndex = "-1";
         let count = 0;
         let w = '';
         for(let c in player){
@@ -269,8 +270,11 @@ document.body.onkeyup = function (e) {
                 winner.style.zIndex = "0";
                 if(player[loser].life > 0){
                     reverseCounter(5, loser);
-                }  else if (eventBox.indexOf(player[mover].step) != -1) {
-                    checkEvent(mover);
+                    if (eventBox.indexOf(player[text1].step) != -1) {
+                        checkEvent(text1);
+                    }
+                }  else if (eventBox.indexOf(player[text1].step) != -1) {
+                    checkEvent(text1);
                 } else {
                     turnEnd();
                 }
@@ -297,8 +301,11 @@ document.body.onkeyup = function (e) {
                 winner.style.zIndex = "0";
                 if(player[loser].life > 0){
                     reverseCounter(5, loser);
-                }  else if (eventBox.indexOf(player[mover].step) != -1) {
-                    checkEvent(mover);
+                    if (eventBox.indexOf(player[text2].step) != -1) {
+                        checkEvent(text2);
+                    }
+                }  else if (eventBox.indexOf(player[text2].step) != -1) {
+                    checkEvent(text2);
                 } else {
                     turnEnd();
                 }
