@@ -269,6 +269,10 @@ document.body.onkeyup = function (e) {
                 winner.style.zIndex = "0";
                 if(player[loser].life > 0){
                     reverseCounter(5, loser);
+                }  else if (eventBox.indexOf(player[mover].step) != -1) {
+                    checkEvent(mover);
+                } else {
+                    turnEnd();
                 }
             }, 3500);
         } else {
@@ -293,6 +297,10 @@ document.body.onkeyup = function (e) {
                 winner.style.zIndex = "0";
                 if(player[loser].life > 0){
                     reverseCounter(5, loser);
+                }  else if (eventBox.indexOf(player[mover].step) != -1) {
+                    checkEvent(mover);
+                } else {
+                    turnEnd();
                 }
             }, 3500);
         } else {
