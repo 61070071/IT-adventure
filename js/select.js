@@ -50,7 +50,8 @@ function setCharacter(theChar) {
         for(let c in player){
             if(theChar.getAttribute("charId") == player[c].character){
                 player[c].character = 0;
-                theChar.childNodes[0].setAttribute("player", "")
+                console.log(theChar.firstChild);
+                theChar.childNodes[1].setAttribute("player", "")
             }
         }
     }
